@@ -1,4 +1,4 @@
-describe('Testing basic Angular registration', () => {
+describe('Create a pages', () => {
     beforeEach(() => {
         cy.visit('http://localhost:2368/ghost/');
         cy.wait(1000);
@@ -9,7 +9,7 @@ describe('Testing basic Angular registration', () => {
         })
         cy.wait(1000)
     })
-    it('Login and create a post and display an invalide title message', () => {
+    it('Create a post and display a message cause title exceed 255 characters', () => {
 
         cy.get('section.gh-nav-body').should('be.visible').within(() => {
             //click en la opción pages
@@ -47,7 +47,7 @@ describe('Testing basic Angular registration', () => {
         })
     })
 
-    it('Create a page successful', () => {
+    it('Create a page successful with the title and body correctly', () => {
         cy.get('section.gh-nav-body').should('be.visible').within(() => {
             //click en la opción pages
             cy.contains('Pages').click();
@@ -92,7 +92,7 @@ describe('Testing basic Angular registration', () => {
         })
     })
 
-    it('Create new page and upload a image', () => {
+    it('Create new page and uploading a image', () => {
         cy.get('section.gh-nav-body').should('be.visible').within(() => {
             //click en la opción pages
             cy.contains('Pages').click();
@@ -135,7 +135,7 @@ describe('Testing basic Angular registration', () => {
 
     })
 
-    it('upload a image with wrong extension a display a error message', () => {
+    it('Create a new page and upload a image with wrong extension a display a error message', () => {
         cy.get('section.gh-nav-body').should('be.visible').within(() => {
             //click en la opción pages
             cy.contains('Pages').click();
