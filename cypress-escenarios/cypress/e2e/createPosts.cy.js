@@ -36,26 +36,17 @@ describe('Create a post', () => {
             cy.get('div.gh-date-time-picker-time').find('input').within((element) => {
                 const val = element.val()
                 let number = parseInt(val.split(':')[1])
-                let count = number + 60
+                let count = number + 25
                 let textValue = val.split(':')[0] + ':' + count
                 cy.log(textValue)
                 cy.log(element)
                 element.click()
-                cy.wait(2000);          
+                cy.wait(2000);
                 element.val(textValue)
-                cy.wait(5000)  
-          
-           
-          
-                
-               
-                 
+                cy.wait(5000)
             })
-        })
 
-        cy.get('input.ember-power-select-trigger-multiple-input').should('be.visible').within((element) => {
-            element.click()
+            cy.get('input[name="post-setting-slug"]').type("prueba")
         })
-
     })
 })
