@@ -13,7 +13,9 @@ cypress run --headless
 1. Create a new post and modify the date, display a message if the date is greater than  today
 2. Create a new post and modify the time, put the old time than today, and publish correctly
 
-Kraken |Pro |Contra |
---- | --- | 
- | Es rápido a la hora de ejecutar en comparación de cypress | No se encuentra mucha documentación en la web |
- | Utiliza como base web drive IO lo que permite realizar busqueda en internet para ayudarse a resolver situaciones de selectores | No hay documentación de como correr varios archivos .feature |
+## Kraken - Pro
+* Es rápido a la hora de ejecutar en comparación de cypress 
+* Utiliza como base web drive IO lo que permite realizar busqueda en internet para ayudarse a resolver situaciones de selectores
+## Kraken - Contra
+* No se encuentra mucha documentación en la interent 
+* No hay documentación de como correr varios archivos .feature
