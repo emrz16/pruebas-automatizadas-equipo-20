@@ -73,9 +73,9 @@ describe('Testing basic Angular registration', () => {
         cy.wait(1000)
         memberPage.getSearchBarMember().type("Emmanuel");
         cy.wait(1000)
-
-        // profilePage.getEmailProfileError().then(($value) =>{
-        //     expect($value[0].innerText.includes("Please supply a valid email address")).to.be.true
-        // })
+        memberPage.getTableSearch().contains('Emmanuel').then(($value) =>{
+            console.log($value);
+            expect($value).to.exist
+        })
     })
   })
