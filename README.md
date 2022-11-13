@@ -17,5 +17,5 @@ cypress run --headless
 * Es rápido a la hora de ejecutar en comparación de cypress 
 * Utiliza como base web drive IO lo que permite realizar busqueda en internet para ayudarse a resolver situaciones de selectores
 ## Kraken - Contra
-* No se encuentra mucha documentación en la interent 
+* No se encuentra mucha documentación en la internet 
 * No hay documentación de como correr varios archivos .feature
