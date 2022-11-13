@@ -1,9 +1,9 @@
-## correr el proyecto 
+## Run the project 
 cypress run --headless
 
-## Escenarios
+## Scenaries
 
-## Scenery: Create a new page 
+## Scenaries: Create a new page 
 1. Create a post and display a message cause title exceed 255 characters
 2. Create a page successful with the title and body correctly
 3. Create new page and uploading a image and create a new page correctly
