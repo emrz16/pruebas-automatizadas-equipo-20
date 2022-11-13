@@ -1,11 +1,16 @@
+import LoginPage from "./pageObjects/LoginPage";
+import PostPage from "./pageObjects/PostPage";
+
 describe('Create a post', () => {
+    const loginPage = new LoginPage();
+    const postPage=new PostPage();
     beforeEach(() => {
         cy.visit('http://localhost:2368/ghost/');
         cy.wait(1000);
         cy.get('form').within(() => {
-            cy.get('input[id="ember6"]').type('j.quinchia@uniandes.edu.co')
-            cy.get('input[id="ember8"]').type('OrionQuinchia')
-            cy.get('button[id="ember10"]').click()
+            loginPage.getEmail().type('j.quinchia@uniandes.edu.co')
+            loginPage.getPassword().type('OrionQuinchia')
+            loginPage.getLoginButton().click()
         })
         cy.wait(1000)
     })
@@ -13,40 +18,45 @@ describe('Create a post', () => {
 
     it('Create a new post and modify the date, display a message if the date is greater than  today', () => {
 
-        cy.get('section.gh-nav-body').should('be.visible').within(() => {
-            //click en la opción pages
+        postPage.getSection().should('be.visible').within(() => {
             cy.contains('Post').click();
             cy.wait(1000);
         })
 
-        cy.get('main.gh-main').should('be.visible').within(() => {
-            cy.contains('New post').click()
+        postPage.getMain().should('be.visible').within(() => {
+          cy.get('a.view-actions-top-row').click()
             cy.wait(1000)
         })
 
-        cy.get('div.gh-koenig-editor-pane').should('be.visible').within((element) => {
+        postPage.getEditorPane().should('be.visible').within(() => {
             cy.get('textarea[placeholder="Post title"]').type('title post')
             cy.get('div.koenig-editor__editor-wrapper').type('body')
             cy.wait(2000)
         })
 
-        cy.get('button.settings-menu-toggle').click();
+        postPage.getSettingButton().click();
         cy.wait(2000);
-        cy.get('div.settings-menu-pane').should('be.visible').within((element) => {
-            cy.get('div.gh-date-time-picker-time').find('input').within((element) => {
+        postPage.getMenuPanel().should('be.visible').within(() => {
+            postPage.getDivPicker().find('input').within((element) => {
                 const val = element.val()
-                let number = parseInt(val.split(':')[1])
-                let count = number + 25
-                let textValue = val.split(':')[0] + ':' + count
-                cy.log(textValue)
-                cy.log(element)
+                const hour = val.split(':')[0]
+                const minute = (parseInt(val.split(':')[1]) - 1).toString().padStart(2, '0')
+                const newValue = hour + ':' + minute;            
                 element.click()
                 cy.wait(2000);
-                element.val(textValue)
+                element.val(newValue)
                 cy.wait(5000)
             })
 
-            cy.get('input[name="post-setting-slug"]').type("prueba")
+            postPage.getInputSlug().type("prueba")
         })
+        postPage.getSettingButton().click()
+        cy.wait(2000)
+        postPage.getButtonPublish().click()
+        cy.wait(2000)   
+        postPage.getBlackPublishButton().click()
+        cy.wait(2000)   
+        postPage.getGreenPublishButton().click()  
+
     })
 })
