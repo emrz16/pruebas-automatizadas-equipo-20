@@ -80,4 +80,54 @@ When('I enter spaced email {string}', async function (email) {
 });
 
 
+// ---
+When('I click next', async function() {
+    let element = await this.driver.$('#ember10');
+    return await element.click();
+})
 
+When('I click on options user profile', async function () {
+    let element = await this.driver.$('.gh-user-avatar');
+    return await element.click();
+});
+
+When('I click on user profile', async function () {
+    let element = await this.driver.$('.dropdown-menu > li:nth-child(4)');
+    return await element.click();
+});
+When('I Focus on user name', async function () {
+    let element = await this.driver.$('#user-name');
+    return await element.click();
+});
+
+When('I delete a email profile', async function () {
+    let element = await this.driver.$('#user-email');
+    return await element.clearValue()
+});
+
+
+When('I write a email profile {string}', async function (search) {
+    let element = await this.driver.$('#user-email');
+    return await element.setValue(search);
+});
+
+When('I Click in save name', async function () {
+    let element = await this.driver.$('.gh-btn.gh-btn-primary.gh-btn-icon.ember-view');
+    return await element.click();
+});
+
+
+When('I remove text from id {string}', async function (id) {
+    let element = await this.driver.$('#' + id);
+    return await element.clearValue();
+});
+
+When('I click in members menu', async function () {
+    let element = await this.driver.$('.gh-nav-list.gh-nav-manage > li:nth-child(4)');
+    return await element.click();
+});
+
+When('I write a member name {string}', async function (search) {
+    let element = await this.driver.$('.gh-input.gh-members-list-searchfield');
+    return await element.setValue(search);
+});
