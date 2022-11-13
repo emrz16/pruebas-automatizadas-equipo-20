@@ -4,9 +4,9 @@ Feature: My feature
 Scenario: Create a new page with the wrong title
   Given I navigate to page "http://localhost:2368/ghost/"
   And I wait for 5 seconds
-  When I enter email "j.quinchia@uniandes.edu.co"
+  When I enter email "<USERNAME_JULIETH>"
   And I wait for 2 seconds
-  And I enter password "OrionQuinchia"
+  And I enter password "<PASSWORD_JULIETH>"
   And I wait for 2 seconds
   And I click sign
   And I wait for 5 seconds  

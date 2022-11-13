@@ -1,12 +1,12 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const path = require('path');
 
-When('I enter email {string}', async function (email) {
+When('I enter email {kraken-string}', async function (email) {
     let element = await this.driver.$('#ember6');
     return await element.setValue(email);
 });
 
-When('I enter password {string}', async function (password) {
+When('I enter password {kraken-string}', async function (password) {
     let element = await this.driver.$('#ember8');
     return await element.setValue(password);
 });
@@ -18,7 +18,6 @@ When('I click sign', async function () {
 
 When('I click on Pages', async function () {
     let element = await this.driver.$('#ember26');
-    console.log('element----------->', element)
     return await element.click();
 })
 
@@ -53,37 +52,23 @@ When('I click publish page', async function () {
 })
 
 When('I upload the file', async function () {
-    const fileUpload =  await this.driver.$('.x-file--input');
+    const fileUpload = await this.driver.$('.x-file--input');
     const filePath = path.join(__dirname, './../piramide.png');
     return await fileUpload.setValue(filePath);
 })
 
 When('I upload the file docx extension', async function () {
-    const fileUpload =  await this.driver.$('.x-file--input');
+    const fileUpload = await this.driver.$('.x-file--input');
     const filePath = path.join(__dirname, './files/Archivo-prueba.docx');
     return await fileUpload.setValue(filePath);
 })
 
 When('I got error message', async function () {
-    const elem =  await this.driver.$('.gh-setting-error');
+    const elem = await this.driver.$('.gh-setting-error');
     console.log(await elem.getText());
 })
 
-
-
-
-
-When('I enter email {kraken-string}', async function (email) {
-    let element = await this.driver.$('#identification');
-    return await element.setValue(email);
-});
-
-When('I enter password {kraken-string}', async function (password) {
-    let element = await this.driver.$('#password');
-    return await element.setValue(password);
-});
-
-When('I click sign in', async function() {
+When('I click sign in', async function () {
     let element = await this.driver.$('#ember7');
     return await element.click();
 })
@@ -141,7 +126,7 @@ When('I clear time content', async function () {
     return await element.clearValue();
 });
 
-When('I click subscribe', async function() {
+When('I click subscribe', async function () {
     let element = await this.driver.$('.gh-head-button.gh-portal-close');
     return await element.click();
 })
@@ -153,8 +138,7 @@ When('I enter spaced email {string}', async function (email) {
 });
 
 
-// ---
-When('I click next', async function() {
+When('I click next', async function () {
     let element = await this.driver.$('#ember10');
     return await element.click();
 })
@@ -204,3 +188,21 @@ When('I write a member name {string}', async function (search) {
     let element = await this.driver.$('.gh-input.gh-members-list-searchfield');
     return await element.setValue(search);
 });
+
+When('I set the time a old time', async function () {
+    let element = await this.driver.$('.gh-date-time-picker-time > input').getValue();
+    const hour = element.split(':')[0]
+    const minute = (parseInt(element.split(':')[1]) - 1).toString().padStart(2, '0')
+    const newValue = hour + ':' + minute
+    return await this.driver.$('.gh-date-time-picker-time > input').setValue(newValue);
+});
+
+Then('I click to publish the post',async function(){
+    let element = await this.driver.$('.gh-publish-trigger');
+    return await element.click();
+})
+
+When('I continue publishig',async function(){
+    let element = await this.driver.$('.gh-btn-black');
+    return await element.click(); 
+})
