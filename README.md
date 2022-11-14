@@ -1,8 +1,6 @@
 ## Run the project 
-* cypress
-  cypress: run --headless
- * kraken :
- ../node_modules/kraken-node/bin/kraken-node run
+* cypress: run --headless
+ * kraken : ../node_modules/kraken-node/bin/kraken-node run
 
 ## Scenaries
 
