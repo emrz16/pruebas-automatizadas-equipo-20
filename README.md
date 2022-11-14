@@ -19,3 +19,9 @@ cypress run --headless
 ## Kraken - Contra
 * No se encuentra mucha documentación en la internet 
 * No hay documentación de como correr varios archivos .feature
+
+## Cypress - pro
+* crea video de la ejecución de las pruebas, permite saber en que momento falla la prueba, y adicional se puede ver en vivo la ejecución
+
+## Cypress - Contra
+* Es más lento en comparación de kraken
