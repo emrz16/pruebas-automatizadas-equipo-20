@@ -18,9 +18,10 @@ cypress run --headless
 
 ## Scenaries: Validation of admin's login credentials
 
-1. When leaving empty admin's email input, the login is not successful. 
+1. When leaving empty admin's email input, the login is not successful
 2. When writing the incorrect password on admin's password input, the login is not succesful.
-
+3. When writing admin's email without its domain, the login is not successful
+4. When writing admin's email without '@', the login is not successful
 
 ## Scenaries: Create a new page 
 
@@ -33,4 +34,5 @@ cypress run --headless
 
 1. Create a new post and modify the date, display a message if the date is greater than  today
 2. Create a new post and modify the time, put the old time than today, and publish correctly
- 
+3. When creating a new post with a wrong date format, it won't be successful
+4. Create a new post with a right date format 
