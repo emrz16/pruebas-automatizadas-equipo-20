@@ -206,3 +206,46 @@ When('I continue publishig',async function(){
     let element = await this.driver.$('.gh-btn-black');
     return await element.click(); 
 })
+
+// Cristina
+When('I click Filter', async function() {
+    let element = await this.driver.$('.view-actions .gh-btn:not(.gh-btn-primary):not(.gh-btn-blue):not(.gh-btn-green):not(.gh-btn-link)');
+    return await element.click();
+})
+When('I click on List Name', async function() {
+    let element = await this.driver.$('.gh-filter-inputgroup > span:nth-child(1)');
+    console.log(element);
+    return await element.click();
+})
+When('I click on Name', async function() {
+    let element = await this.driver.$('.gh-select select');
+    return await element.click();
+})
+When('I select Name', async function() {
+    let element = await this.driver.$('.gh-select select');
+    return await element.click();
+})
+When('I select Email', async function() {
+    let element = await this.driver.$('select[class="ember-view"]');
+    return await element.setValue('email');
+})
+When('I click on Apply filters', async function() {
+    let element = await this.driver.$('.gh-btn-black, .gh-btn-primary');
+    return await element.click();
+})
+When('I type on the search bar a non member', async function() {
+    let element = await this.driver.$('.members-header .view-actions input.gh-members-list-searchfield');
+    return await element.setValue('Pepe');
+})
+When('I type on the search bar a non member email', async function() {
+    let element = await this.driver.$('.members-header .view-actions input.gh-members-list-searchfield');
+    return await element.setValue('pepe@gmail.com');
+})
+When('I type on the search bar a member email', async function() {
+    let element = await this.driver.$('.members-header .view-actions input.gh-members-list-searchfield');
+    return await element.setValue('lala@gmail.com');
+})
+When('I enter incorrect password', async function() {
+    let element = await this.driver.$('#password');
+    return await element.setValue('445566');
+})
