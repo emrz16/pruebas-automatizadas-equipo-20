@@ -1,4 +1,4 @@
-## Setting
+## Settings
 * Kraken version: ^1.0.24"
 * Node version: 14.18.2
 * ghost version: 5.18.0
