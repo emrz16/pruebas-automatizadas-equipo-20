@@ -2,6 +2,7 @@
 * Kraken version: ^1.0.24"
 * Node version: 14.18.2
 * ghost version: 5.22.4
+* ghost version: 3.42
 * Android studio: Dolphin 2021.3.1
 
 ## Run the project 
