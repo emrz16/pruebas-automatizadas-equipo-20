@@ -35,7 +35,7 @@ class PostPage {
     }
     
     getGreenPublishButton() {
-        cy.get('button.gh-btn-pulse');
+        return cy.get('button.gh-btn-pulse');
     }
 }
 
