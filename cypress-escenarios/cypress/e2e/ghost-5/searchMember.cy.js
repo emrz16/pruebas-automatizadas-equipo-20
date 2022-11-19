@@ -1,7 +1,7 @@
-import LoginPage from '../pageObjects/LoginPage';
-import HomePage from '../pageObjects/HomePage';
-import ProfilePage from '../pageObjects/ProfilePage';
-import MemberPage from '../pageObjects/MemberPage';
+import LoginPage from './pageObjects/LoginPage';
+import HomePage from './pageObjects/HomePage';
+import ProfilePage from './pageObjects/ProfilePage';
+import MemberPage from './pageObjects/MemberPage';
 
 describe('Testing basic Angular registration', () => {
     const homePage = new HomePage();

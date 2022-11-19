@@ -1,5 +1,5 @@
-import CreatePage from "../pageObjects/CreatePage";
-import LoginPage from '../pageObjects/LoginPage';
+import CreatePage from "./pageObjects/CreatePage";
+import LoginPage from './pageObjects/LoginPage';
 
 describe('Create a pages', () => {
     const createPage = new CreatePage();

@@ -1,5 +1,5 @@
-import LoginPage from "../pageObjects/LoginPage";
-import PostPage from "../pageObjects/PostPage";
+import LoginPage from "./pageObjects/LoginPage";
+import PostPage from "./pageObjects/PostPage";
 
 describe('Create a post', () => {
     const loginPage = new LoginPage();
