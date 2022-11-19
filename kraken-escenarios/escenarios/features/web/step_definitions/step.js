@@ -32,7 +32,7 @@ When('I write a title to page {string}', async function (text) {
 })
 
 When('I write a title to body {string}', async function (text) {
-    let element = await this.driver.$('.koenig-editor__editor.__mobiledoc-editor');
+    let element = await this.driver.$('.__mobiledoc-editor');
     return await element.setValue(text);
 })
 
@@ -53,7 +53,7 @@ When('I click publish page', async function () {
 
 When('I upload the file', async function () {
     const fileUpload = await this.driver.$('.x-file--input');
-    const filePath = path.join(__dirname, './../piramide.png');
+    const filePath = path.join(__dirname, './files/piramide.png');
     return await fileUpload.setValue(filePath);
 })
 
