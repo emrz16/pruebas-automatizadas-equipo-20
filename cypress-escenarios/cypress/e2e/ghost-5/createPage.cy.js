@@ -17,7 +17,7 @@ describe('Create a pages', () => {
         cy.wait(1000);   
     })
 
-    it('Create a post and display a message cause title exceed 255 characters', () => {
+    it('Create a page and display a message cause title exceed 255 characters', () => {
         cy.get('div.gh-viewport').screenshot('ghost-5/createPageErrorMessage/sectionV5'); 
         createPage.getSection().should('be.visible').within(() => { 
             cy.wait(1000);
@@ -39,7 +39,7 @@ describe('Create a pages', () => {
             cy.wait(2000)          
         })
                 
-        createPage.getButtonPublish().click();       
+        createPage.getButtonPublish().click();    
         cy.wait(1000);
         cy.get('div.gh-viewport').screenshot('ghost-5/createPageErrorMessage/titleV5');
         createPage.getArticleAlert().contains( 'Validation failed: Title cannot be longer than 255 characters')
@@ -135,7 +135,7 @@ describe('Create a pages', () => {
 
     it('Create a new page and upload a image with wrong extension a display a error message', () => {
         cy.get('div.gh-viewport').screenshot('ghost-5/createPageWithImageWrong/sectionV5'); 
-        
+
         createPage.getSection().should('be.visible').within(() => { 
             cy.contains('Pages').click();
             cy.wait(1000);
