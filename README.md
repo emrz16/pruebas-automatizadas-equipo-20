@@ -5,7 +5,7 @@
 * Android studio: Dolphin 2021.3.1
 
 ## Ghost version 3.42
-1) En la siguiente imagen se muestra las versiones necesarias para correr ghost en las versiín 3.42
+1) En la siguiente imagen se muestra las versiones necesarias para correr ghost en las versión 3.42
  ![image](https://user-images.githubusercontent.com/60898371/202872360-bfdaad6b-b8ae-4445-b5d3-97b6ca361b6d.png)
 2) Situarse en la carpeta ghost cd ghost y realizar npm install
 3) ejecutar: ghost start
