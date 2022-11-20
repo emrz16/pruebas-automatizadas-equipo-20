@@ -71,12 +71,13 @@ describe('Create a pages', () => {
             createPage.getTextareaPageTitle().type('title pruebas')
             cy.wait(2000)            
         })
-
+        cy.get('div.gh-viewport').screenshot('ghost-5/createPageCorrectly/titleV5');
+        cy.wait(2000);
         createPage.getButtonPublish().click();   
         cy.wait(5000);
         createPage.getPublishButtonInsideModal().click();
         cy.wait(2000);
-        cy.get('div.gh-viewport').screenshot('ghost-3/createPageCorrectly/titleV5');
+        cy.get('div.epm-modal-container').screenshot('ghost-5/createPageCorrectly/createdV5');
 
     })
 

@@ -3,6 +3,7 @@
 * Node version: 14.18.2
 * ghost version: 5.22.4
 * Android studio: Dolphin 2021.3.1
+*cypres version: 10.9.0
 
 ## Ghost version 3.42
 1) En la siguiente imagen se muestra las versiones necesarias para correr ghost en las versión 3.42
