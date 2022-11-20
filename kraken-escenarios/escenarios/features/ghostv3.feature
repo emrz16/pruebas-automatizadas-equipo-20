@@ -2,7 +2,7 @@ Feature: My feature
 
 @user1 @web
 Scenario: Como usuario inicio sesion y edito el nombre del administrador
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 2 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 1 seconds
@@ -23,7 +23,7 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
 
 @user2 @web
 Scenario: Como usuario inicio sesion y edito el nombre del administrador
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 2 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 1 seconds
@@ -44,7 +44,7 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
 
 @user3 @web
 Scenario: Como usuario inicio sesion y edito el nombre del administrador
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 2 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 1 seconds
@@ -64,7 +64,7 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
 
 @user4 @web
 Scenario: Como usuario inicio sesion y edito el nombre del administrador
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 2 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 1 seconds
