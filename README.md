@@ -131,6 +131,54 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 ## Scenaries : Create a new post
 
 1. Create a new post and modify the date, display a message if the date is greater than  today
-2. Create a new post and modify the time, put the old time than today, and publish correctly
-3. When creating a new post with a wrong date format, it won't be successful
-4. Create a new post with a right date format 
+ ```
+   -login
+   -click on Post
+   -click on new post
+   -clic to write in title
+   -click to write a body to the page
+   -click on setting
+   -write a invalid time in publish date
+   -close setting
+   -click publish
+   -display a validation message
+```
+3. Create a new post and modify the time, put the old time than today, and publish correctly
+ ```
+   -login
+   -click on Post
+   -click on new post
+   -clic to write in title
+   -click to write a body to the page
+   -click on setting
+   -write a valid time in publish date
+   -close setting
+   -click publish
+   -published succesfully
+```
+5. When creating a new post with a wrong date format, it won't be successful
+```
+   -login
+   -click on Post
+   -click on new post
+   -clic to write in title
+   -click to write a body to the page
+   -click on setting
+   -write a invalid format publish date
+   -close setting
+   -click publish
+   -display a validation message
+```
+7. Create a new post with a right date format 
+```
+   -login
+   -click on Post
+   -click on new post
+   -clic to write in title
+   -click to write a body to the page
+   -click on setting
+   -write a valid format publish date
+   -close setting
+   -click publish
+   -published succesfully
+```
