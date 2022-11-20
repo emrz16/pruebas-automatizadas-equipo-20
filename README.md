@@ -29,7 +29,9 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 No es necesario realizar lo anterior
  
 ## Run the report
-   node index.js
+   * cd reporte/resemble
+   * node index.js
+   * creara un archivo dentro de la carpeta results/report.html
 
 ## Scenaries
 
