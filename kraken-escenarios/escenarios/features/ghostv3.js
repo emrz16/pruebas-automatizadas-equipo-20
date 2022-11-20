@@ -190,3 +190,43 @@ Scenario: Create a page with correct title
   And I wait for 5 seconds
   And I publish in button again
   And I wait for 2 seconds
+
+  @user14 @web
+Scenario: Como Ghost Admin quiero hacer login dejando espacio inicial de correo
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter spaced email v3 "  pruebas@gmail.com"
+  And I wait for 2 seconds
+  And I enter password v3 "<PASSWORD_GHOST3>"
+  And I wait for 4 seconds
+  Then I click next v3  
+  And I wait for 5 seconds
+  
+@user15 @web
+Scenario: Como Ghost Admin quiero hacer login omitiendo el arroba del correo
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter spaced email v3 "pruebasgmail.com"
+  And I wait for 2 seconds
+  And I enter password v3 "<PASSWORD_GHOST3>"
+  And I wait for 4 seconds
+  Then I click next v3  
+  And I wait for 5 seconds
+
+@user16 @web
+Scenario: Como Ghost public Admin no me permite continuar con el login, dejando el campo de E-mail vacío
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  Then I click next v3  
+  And I wait for 5 seconds
+
+@user17 @web
+Scenario: Como Ghost admin, al iniciar sesión, si la contraseña es incorrecta debe indicarlo.
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter email v3 "<USERNAME_GHOST3>"
+  And I wait for 2 seconds
+  And I enter incorrect password v3
+  And I wait for 4 seconds
+  Then I click next v3    
+  And I wait for 3 seconds
