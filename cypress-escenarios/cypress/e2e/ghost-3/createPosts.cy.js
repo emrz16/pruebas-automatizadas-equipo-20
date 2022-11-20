@@ -1,5 +1,5 @@
-import LoginPage from "../pageObjects/LoginPage";
-import PostPage from "../pageObjects/PostPage";
+import LoginPage from "./pageObjects/LoginPage";
+import PostPage from "./pageObjects/PostPage";
 
 describe('Create a post', () => {
     const loginPage = new LoginPage();
@@ -9,8 +9,8 @@ describe('Create a post', () => {
         cy.wait(1000);
         cy.get('div.gh-flow').screenshot('loginV5');
         cy.get('form').within(() => {
-            loginPage.getEmail().type('j.quinchia@uniandes.edu.co')
-            loginPage.getPassword().type('OrionQuinchia')
+            loginPage.getEmail().type('pruebas@gmail.com');
+            loginPage.getPassword().type('pruebas1234');
             loginPage.getLoginButton().click()
         })
         cy.wait(1000)
@@ -30,18 +30,19 @@ describe('Create a post', () => {
 
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostWithWrongDate/newPost');
 
-        postPage.getEditorPane().should('be.visible').within((element) => {
-            cy.get('textarea[placeholder="Post title"]').type('title post')
-            cy.get('div.koenig-editor__editor-wrapper').type('body')
+        postPage.getEditorPane().should('be.visible').within(() => {
+            postPage.getTextateaTitle().type('title post');
+            cy.wait(2000)
+            postPage.getBodyCreatePost().type('body');
             cy.wait(2000)
         })
 
-        cy.get('button.settings-menu-toggle').click();
+        postPage.getSettingButton().click();
         cy.wait(2000);
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostWithWrongDate/setting');
 
-        cy.get('div.settings-menu-pane').should('be.visible').within(() => {
-            cy.get('div.gh-date-time-picker-time').find('input').within((element) => {
+        postPage.getMenuPanel().should('be.visible').within(() => {
+            postPage.getDivPicker().find('input').within((element) => {
                 const val = element.val()
                 let number = parseInt(val.split(':')[1])
                 let count = number + 60
@@ -52,8 +53,9 @@ describe('Create a post', () => {
                 cy.wait(5000)
 
             })
-            cy.get('input[name="post-setting-slug"]').click()
+            postPage.getInputSlug().click()
         })
+     
         cy.wait(1000)
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostWithWrongDate/setting');
     })
@@ -72,20 +74,14 @@ describe('Create a post', () => {
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostWithRightDate/newPost');
 
         postPage.getEditorPane().should('be.visible').within((element) => {
-            cy.get('textarea[placeholder="Post title"]').type('title post')
-            cy.get('div.koenig-editor__editor-wrapper').type('body')
+            postPage.getTextateaTitle().type('title post')
+            postPage.getBodyCreatePost().type('body')
             cy.wait(2000)
         })
-
-        postPage.getSettingButton().click();
+      
+        postPage.getPublishButton().click()
         cy.wait(2000);
-        postPage.getSettingButton().click();
-        cy.wait(2000);
-        cy.get('button.gh-btn.gh-btn-editor.darkgrey.gh-publish-trigger').click();
-        cy.wait(1000);
-        cy.get('button.gh-btn.gh-btn-black.gh-btn-large').click();
-        cy.wait(1000);
-        cy.get('button.gh-btn.gh-btn-large.gh-btn-pulse.ember-view').click();
+        postPage.getPublishButtonInsideModal().click() 
         cy.wait(1000);
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostWithRightDate/publish');
         cy.wait(1000);
@@ -99,14 +95,14 @@ describe('Create a post', () => {
         })
 
         postPage.getMain().should('be.visible').within(() => {
-            cy.get('a.view-actions-top-row').click()
+            cy.contains('New post').click()
             cy.wait(1000)
         })
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostComplete/newPost');
 
         postPage.getEditorPane().should('be.visible').within(() => {
-            cy.get('textarea[placeholder="Post title"]').type('title post')
-            cy.get('div.koenig-editor__editor-wrapper').type('body')
+            postPage.getTextateaTitle().type('title post')
+            postPage.getBodyCreatePost().type('body')
             cy.wait(2000)
         })
 
@@ -127,14 +123,12 @@ describe('Create a post', () => {
 
             postPage.getInputSlug().type("prueba")
         })
-        postPage.getSettingButton().click()
-        cy.wait(2000)
-        postPage.getButtonPublish().click()
-        cy.wait(2000)
-        postPage.getBlackPublishButton().click()
+        postPage.getButtonCloseSettings().click()
         cy.wait(2000);
-        postPage.getGreenPublishButton().click()
+        postPage.getPublishButton().click()
         cy.wait(2000);
+        postPage.getPublishButtonInsideModal().click()   
+        cy.wait(1000);
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostComplete/publish');
     })
 
@@ -152,16 +146,16 @@ describe('Create a post', () => {
         })
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostOldTime/newPost');
         postPage.getEditorPane().should('be.visible').within((element) => {
-            cy.get('textarea[placeholder="Post title"]').type('title post')
-            cy.get('div.koenig-editor__editor-wrapper').type('body')
+             postPage.getTextateaTitle().type('title post')
+             postPage.getBodyCreatePost().type('body')
             cy.wait(2000)
         })
 
-        cy.get('button.settings-menu-toggle').click();
+        postPage.getSettingButton().click();
         cy.wait(2000);
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostOldTime/settings');
-        cy.get('div.settings-menu-pane').should('be.visible').within((element) => {
-            cy.get('div.gh-date-time-picker-time').find('input').within((element) => {
+        postPage.getMenuPanel().should('be.visible').within((element) => {
+            postPage.getDivPicker().find('input').within((element) => {
                 const val = element.val()
                 let number = parseInt(val.split(':')[1])
                 let count = number - 1
@@ -176,14 +170,12 @@ describe('Create a post', () => {
             })
 
         })
-        cy.get('button.settings-menu-toggle').click();
+        postPage.getButtonCloseSettings().click()
         cy.wait(2000);
-        cy.get('button.gh-btn.gh-btn-editor.darkgrey.gh-publish-trigger').click();
-        cy.wait(1000);
-        cy.get('button.gh-btn.gh-btn-black.gh-btn-large').click();
-        cy.wait(1000);
-        cy.get('button.gh-btn.gh-btn-large.gh-btn-pulse.ember-view').click();
-        cy.wait(1000);
+        postPage.getPublishButton().click()
+        cy.wait(2000);
+        postPage.getPublishButtonInsideModal().click()  
+        cy.wait(1000);      
         cy.get('div.gh-viewport').screenshot('ghost-5/createPostOldTime/publish');
     })
 })
