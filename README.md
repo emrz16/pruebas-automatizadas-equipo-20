@@ -28,7 +28,8 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 *Sitema operativo mac 
 No es necesario realizar lo anterior
  
-
+## Run the report
+   node index.js
 
 ## Scenaries
 
