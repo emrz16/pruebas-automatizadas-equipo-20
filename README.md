@@ -60,6 +60,7 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
    -click publish
    -display a error message
 3. Create a page successful with the title and body correctly
+   ```
     -login
    -click on Page
    -click on new page
@@ -68,6 +69,7 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
    -click publish
    -continue publishin
    -page is publish with sucess
+  ```
 5. Create new page and uploading a image and create a new page correctly
 6. Create a new page and upload a image with wrong extension a display a error message
 
