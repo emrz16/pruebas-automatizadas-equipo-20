@@ -67,11 +67,32 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
    -clic to write in title
    -click to write a body to the page
    -click publish
-   -continue publishin
+   -continue publishing
    -page is publish with sucess
    ```
 5. Create new page and uploading a image and create a new page correctly
-6. Create a new page and upload a image with wrong extension a display a error message
+```
+   -login
+   -click on Page
+   -click on new page
+   -clic to write in title
+   -click to write a body to the page
+   -upload a imagen with correct extension
+   -click on publish button
+   -continue publishing
+   -page is publish with sucess
+```
+7. Create a new page and upload a image with wrong extension a display a error message
+ ```
+   -login
+   -click on Page
+   -click on new page
+   -clic to write in title
+   -click to write a body to the page
+   -upload a imagen with wrong extension
+   -click on publish button
+   -display a error message caused extesion file
+```
 
 ## Scenaries : Create a new post
 
