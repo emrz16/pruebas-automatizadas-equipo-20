@@ -88,6 +88,7 @@ When('I click on post settings', async function () {
     return await element.click();
 });
 
+
 When('I click on hour field', async function () {
     let element = await this.driver.$('.gh-date-time-picker-time');
     return await element.click();
@@ -271,3 +272,71 @@ When('I Click in save name v3', async function () {
     let element = await this.driver.$('.gh-btn-blue.gh-btn.gh-btn-icon.ember-view');
     return await element.click();
 });
+
+
+When('I write a title to body v3 {string}', async function (text) {
+    let element = await this.driver.$('.__mobiledoc-editor.__has-no-content');
+    return await element.setValue(text);
+})
+
+When('I click on post settings v3', async function () {
+    let element = await this.driver.$('.gh-publishmenu.ember-view');
+    return await element.click();
+});
+Then('I click to publish the post v3', async function () {
+    let element = await this.driver.$('.gh-publishmenu-trigger');
+    return await element.click();
+})
+
+When('I continue publishig v3', async function () {
+    let element = await this.driver.$('.gh-publishmenu-button');
+    return await element.click();
+})
+
+
+When('I click on Pages v3', async function () {
+    let element = await this.driver.$('#ember1247');
+    return await element.click();
+})
+
+When('I click on New Page v3', async function () {
+    let element = await this.driver.$('.gh-btn-green')
+    return await element.click();
+})
+
+When('I click add Image', async function () {
+    let element = await this.driver.$('.koenig-plus-menu-button.br-100.anim-normal')
+    return await element.click();
+
+
+})
+
+When('I select the option Image', async function () {
+    const element = await this.driver.$('div[title="Image"]');
+    return await element.click();
+
+})
+
+
+When('I got error message v3', async function () {
+    const elem = await this.driver.$('.bg-red.white.sans-serif');
+    console.log(await elem.getText());
+})
+
+When('I publish the page v3', async function () {
+    const elem = await this.driver.$('.ember-view.ember-basic-dropdown-trigger.gh-btn.gh-btn-outline.gh-publishmenu-trigger');
+    return await elem.click()
+})
+When('I publish in button again', async function () {
+    const elem = await this.driver.$('.gh-publishmenu-button');
+    return await elem.click()
+})
+
+Then('I got error message for title', async function () {
+    const elem = await this.driver.$('gh-alerts.ember-view');
+    console.log(elem.getText())
+})
+
+
+
+
