@@ -1,7 +1,7 @@
 Feature: My feature
 @user1 @web
 Scenario: Como usuario inicio sesion y edito el nombre del administrador
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 2 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 1 seconds
@@ -22,7 +22,7 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
 
 @user2 @web
 Scenario: Como usuario inicio sesion y edito el nombre del administrador
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 2 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 1 seconds
@@ -43,7 +43,7 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
 
 @user3 @web
 Scenario: Como usuario inicio sesion y edito el nombre del administrador
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 2 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 1 seconds
@@ -63,7 +63,7 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
 
 @user4 @web
 Scenario: Como usuario inicio sesion y edito el nombre del administrador
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 2 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 1 seconds
@@ -82,7 +82,7 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
 
 @user9 @web
 Scenario: Como Ghost admin me permite crear post con formato de fecha anteriores a la actual
-  Given I navigate to page "http://localhost:2368/ghost"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   And I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 2 seconds
@@ -90,7 +90,7 @@ Scenario: Como Ghost admin me permite crear post con formato de fecha anteriores
   And I wait for 4 seconds
   And I click next v3  
   And I wait for 3 seconds
-  And I navigate to page "http://localhost:2368/ghost/#/editor/post"
+  And I navigate to page "<GHOST_LINK>#/editor/post"
   And I wait for 3 seconds
   And I enter title "<TITLE>"
   And I wait for 3 seconds
@@ -109,7 +109,7 @@ Scenario: Como Ghost admin me permite crear post con formato de fecha anteriores
 
 @user10 @web
 Scenario: Create a page and upload image with wrong extension
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 2 seconds
@@ -130,7 +130,7 @@ Scenario: Create a page and upload image with wrong extension
 
 @user11 @web
 Scenario: Create page and upload image
- Given I navigate to page "http://localhost:2368/ghost/"
+ Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 2 seconds
@@ -149,7 +149,7 @@ Scenario: Create page and upload image
 
 @user12 @web
 Scenario: Create page with large title and display Alert message
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 2 seconds
@@ -172,7 +172,7 @@ Scenario: Create page with large title and display Alert message
 
 @user13 @web
 Scenario: Create a page with correct title
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   When I enter email v3 "<USERNAME_GHOST3>"
   And I wait for 2 seconds

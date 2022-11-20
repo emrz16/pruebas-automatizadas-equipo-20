@@ -81,9 +81,81 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
   Then I Click in save name
   And I wait for 2 seconds
 
+  @user6 @web
+Scenario: Como Ghost admin quiero crear post con formato de fecha correcta
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter email "<USERNAME_JULIETH>"
+  And I wait for 2 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 4 seconds
+  And I click sign in  
+  And I wait for 3 seconds
+  And I navigate to page "http://localhost:2368/ghost/#/editor/post"
+  And I enter title "<TITLE>"  
+  And I enter content "<CONTENT>" 
+  And I wait for 2 seconds
+  And I click on post settings
+  And I click on hour field
+  And I wait for 2 seconds 
+  And I clear time content 
+  And I enter hour "00:10"
+  And I wait for 2 seconds 
+  And I click on post settings
+  And I click on publish
+  And I click on final review
+  Then I click on publish right now
+  And I wait for 5 seconds
+
+  @user7 @web
+Scenario: Como Ghost admin quiero crear post con formato de fecha incorrecto
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter email "<USERNAME_JULIETH>"
+  And I wait for 2 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 4 seconds
+  And I click sign in  
+  And I wait for 3 seconds
+  And I navigate to page "http://localhost:2368/ghost/#/editor/post"
+  And I enter title "<TITLE>"  
+  And I enter content "<CONTENT>" 
+  And I wait for 2 seconds
+  And I click on post settings
+  And I click on hour field
+  And I wait for 2 seconds 
+  And I clear time content 
+  And I enter hour "25:00"
+  Then I click on date field
+  And I wait for 5 seconds
+  
+ @user8 @web
+Scenario: Como Ghost admin no me es permitido crear post con formato de fecha posterior a la actual
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter email "<USERNAME_JULIETH>"
+  And I wait for 2 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 4 seconds
+  And I click sign in  
+  And I wait for 3 seconds
+  And I navigate to page "http://localhost:2368/ghost/#/editor/post"
+  And I enter title "<TITLE>"  
+  And I enter content "<CONTENT>" 
+  And I wait for 2 seconds
+  And I click on post settings
+  And I click on hour field
+  And I wait for 2 seconds  
+  And I clear time content 
+  And I enter hour "23:59"
+  Then I click on date field
+  And I wait for 5 seconds
+  
+   
+
 @user9 @web
 Scenario: Como Ghost admin me permite crear post con formato de fecha anteriores a la actual
-  Given I navigate to page "http://localhost:2368/ghost"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   And I enter email "<USERNAME_JULIETH>"
   And I wait for 2 seconds
@@ -109,7 +181,7 @@ Scenario: Como Ghost admin me permite crear post con formato de fecha anteriores
 
 @user10 @web
 Scenario: Create a page and upload image with wrong extension
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   When I enter email "<USERNAME_JULIETH>"
   And I wait for 2 seconds
@@ -128,7 +200,7 @@ Scenario: Create a page and upload image with wrong extension
 
 @user11 @web
 Scenario: Create page and upload image
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   When I enter email "<USERNAME_JULIETH>"
   And I wait for 2 seconds
@@ -145,7 +217,7 @@ Scenario: Create page and upload image
 
 @user12 @web
 Scenario: Create page with large title and display Alert message
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   When I enter email "<USERNAME_JULIETH>"
   And I wait for 2 seconds
@@ -166,7 +238,7 @@ Scenario: Create page with large title and display Alert message
 
 @user13 @web
 Scenario: Create a page with correct title
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
   When I enter email "<USERNAME_JULIETH>"
   And I wait for 2 seconds
@@ -184,3 +256,46 @@ Scenario: Create a page with correct title
   And I wait for 2 seconds
   And I click to publish the page
   And I wait for 2 seconds
+
+  @user14 @web
+Scenario: Como Ghost Admin quiero hacer login dejando espacio inicial de correo
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter spaced email " <USERNAME_JULIETH>"
+  And I wait for 2 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 4 seconds
+  Then I click sign in  
+  And I wait for 5 seconds
+
+@user15 @web
+Scenario: Como Ghost Admin quiero hacer login omitiendo el arroba del correo
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter spaced email "j.quinchiauniandes.edu.co"
+  And I wait for 2 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 4 seconds
+  Then I click sign in  
+  And I wait for 5 seconds
+  
+
+  @user16 @web
+Scenario: Como Ghost public Admin no me permite continuar con el login, dejando el campo de E-mail vacío
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I click sign in
+  And I wait for 5 seconds
+
+  
+@user17 @web
+Scenario: Como Ghost admin, al iniciar sesión, si la contraseña es incorrecta debe indicarlo.
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter email "<USERNAME_JULIETH>"
+  And I wait for 2 seconds
+  And I enter incorrect password 
+  And I wait for 4 seconds
+  And I click sign in  
+  And I wait for 3 seconds
+  
