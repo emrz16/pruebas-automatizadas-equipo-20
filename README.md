@@ -51,10 +51,25 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 
 ## Scenaries: Create a new page 
 
-1. Create a post and display a message cause title exceed 255 characters
-2. Create a page successful with the title and body correctly
-3. Create new page and uploading a image and create a new page correctly
-4. Create a new page and upload a image with wrong extension a display a error message
+1. Create a post and display a message cause title exceed 255 characters : 
+   -login
+   -click on Page
+   -click on new page
+   -clic to write in title, and write words exceed 255 characters
+   -click to write a body to the page
+   -click publish
+   -display a error message
+3. Create a page successful with the title and body correctly
+    -login
+   -click on Page
+   -click on new page
+   -clic to write in title
+   -click to write a body to the page
+   -click publish
+   -continue publishin
+   -page is publish with sucess
+5. Create new page and uploading a image and create a new page correctly
+6. Create a new page and upload a image with wrong extension a display a error message
 
 ## Scenaries : Create a new post
 
