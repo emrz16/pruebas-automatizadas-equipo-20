@@ -25,8 +25,7 @@
 * Observaciones: Es necesario tener solo un archivo .feature 
 para correr el de versión 5, cambiar la extensión de la versión 3, por ejemplo a una extesión .js y ejecutar el comando, después hacer lo mismo con el archivo de la versión 3
 
-*Sitema operativo mac 
-No es necesario realizar lo anterior
+* Sitema operativo macOS: No es necesario realizar lo anterior
  
 ## Run the report
    * cd reporte/resemble
