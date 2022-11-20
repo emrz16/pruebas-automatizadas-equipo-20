@@ -52,6 +52,7 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 ## Scenaries: Create a new page 
 
 1. Create a post and display a message cause title exceed 255 characters : 
+ ```
    -login
    -click on Page
    -click on new page
@@ -59,6 +60,7 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
    -click to write a body to the page
    -click publish
    -display a error message
+  ```
 3. Create a page successful with the title and body correctly
    ```
     -login
