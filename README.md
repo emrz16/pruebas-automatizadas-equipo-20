@@ -10,6 +10,10 @@
 2) Situarse en la carpeta ghost cd ghost y realizar npm install
 3) ejecutar: ghost start
 
+## Ghost version mayor a 5
+![image](https://user-images.githubusercontent.com/60898371/202880254-baaa0b15-35cd-4114-99db-3bd458c5b629.png)
+
+
 
 ## Run the project cypress
 * cypress: run --headless
