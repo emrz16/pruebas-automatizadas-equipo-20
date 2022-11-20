@@ -65,7 +65,7 @@ When('I upload the file docx extension', async function () {
 
 When('I got error message', async function () {
     const elem = await this.driver.$('.gh-setting-error');
-    console.log(await elem.getText());
+    await elem.getText()
 })
 
 When('I click sign in', async function () {
