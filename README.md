@@ -23,21 +23,54 @@
 * Sistema operativo windows:
  ../node_modules/kraken-node/bin/kraken-node run
 * Observaciones: Es necesario tener solo un archivo .feature 
-para correr el de versión 5, cambiar la extensión de la versión 3, por ejemplo .js
+para correr el de versión 5, cambiar la extensión de la versión 3, por ejemplo a una extesión .js y ejecutar el comando, después hacer lo mismo con el archivo de la versión 3
+
+* Sitema operativo macOS: No es necesario realizar lo anterior
  
-## Run a HTML 
-* Download a live server in visual studio code 
-![image](https://user-images.githubusercontent.com/60898371/202727147-c785b827-4157-4b9b-b5e3-c30e54778760.png)
-* And then rigth click on html file and select "Open with live server" 
-<img width="799" alt="live server" src="https://user-images.githubusercontent.com/60898371/202727494-3816da01-4e44-4244-a3b9-94cbdd16a57b.png">
+## Run the report
+   * cd reporte/resemble
+   * node index.js
+   * creara un archivo dentro de la carpeta results/report.html
 
 ## Scenaries
 
 ## Scenaries : Edit admin's credentials.
 1. When editing admin's name, it is changed and saved successfully
-2. When leaving empty admin's name input, it won't save changes
-3. When editing an email, it can be saved with the correct form
-4. When editing an email, it won't be saved without the correct structure of an e-mail
+```
+  -login
+  -click profile avatar
+  -select third option
+  -modify input name
+  -click on save button
+  - saved succesfully
+```
+3. When leaving empty admin's name input, it won't save changes
+```
+  -login
+  -click profile avatar
+  -select third option
+  -clean input name admin
+  -click on save button
+  -display a validation message  under input name
+```
+5. When editing an email, it can be saved with the correct form
+```
+  -login
+  -click profile avatar
+  -select third option
+  -change the email admin in the input
+  -click on save button
+  - saved succesfully
+```
+7. When editing an email, it won't be saved without the correct structure of an e-mail
+```
+   -login
+  -click profile avatar
+  -select third option
+  -change the email admin in the input with wrong structure
+  -click on save button
+  -display a validation message
+```
 
 ## Scenaries: Search members
 
@@ -55,14 +88,102 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 
 ## Scenaries: Create a new page 
 
-1. Create a post and display a message cause title exceed 255 characters
-2. Create a page successful with the title and body correctly
-3. Create new page and uploading a image and create a new page correctly
-4. Create a new page and upload a image with wrong extension a display a error message
+1. Create a post and display a message cause title exceed 255 characters : 
+ ```
+   -login
+   -click on Page
+   -click on new page
+   -clic to write in title, and write words exceed 255 characters
+   -click to write a body to the page
+   -click publish
+   -display a error message
+  ```
+3. Create a page successful with the title and body correctly
+   ```
+    -login
+   -click on Page
+   -click on new page
+   -clic to write in title
+   -click to write a body to the page
+   -click publish
+   -continue publishing
+   -page is publish with sucess
+   ```
+5. Create new page and uploading a image and create a new page correctly
+```
+   -login
+   -click on Page
+   -click on new page
+   -clic to write in title
+   -click to write a body to the page
+   -upload a imagen with correct extension
+   -click on publish button
+   -continue publishing
+   -page is publish with sucess
+```
+7. Create a new page and upload a image with wrong extension a display a error message
+ ```
+   -login
+   -click on Page
+   -click on new page
+   -clic to write in title
+   -click to write a body to the page
+   -upload a imagen with wrong extension
+   -click on publish button
+   -display a error message caused extesion file
+```
 
 ## Scenaries : Create a new post
 
 1. Create a new post and modify the date, display a message if the date is greater than  today
-2. Create a new post and modify the time, put the old time than today, and publish correctly
-3. When creating a new post with a wrong date format, it won't be successful
-4. Create a new post with a right date format 
+ ```
+   -login
+   -click on Post
+   -click on new post
+   -clic to write in title
+   -click to write a body to the page
+   -click on setting
+   -write a invalid time in publish date
+   -close setting
+   -click publish
+   -display a validation message
+```
+3. Create a new post and modify the time, put the old time than today, and publish correctly
+ ```
+   -login
+   -click on Post
+   -click on new post
+   -clic to write in title
+   -click to write a body to the page
+   -click on setting
+   -write a valid time in publish date
+   -close setting
+   -click publish
+   -published succesfully
+```
+5. When creating a new post with a wrong date format, it won't be successful
+```
+   -login
+   -click on Post
+   -click on new post
+   -clic to write in title
+   -click to write a body to the page
+   -click on setting
+   -write a invalid format publish date
+   -close setting
+   -click publish
+   -display a validation message
+```
+7. Create a new post with a right date format 
+```
+   -login
+   -click on Post
+   -click on new post
+   -clic to write in title
+   -click to write a body to the page
+   -click on setting
+   -write a valid format publish date
+   -close setting
+   -click publish
+   -published succesfully
+```
