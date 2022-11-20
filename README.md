@@ -11,9 +11,14 @@
 3) ejecutar: ghost start
 
 
-## Run the project 
+## Run the project cypress
 * cypress: run --headless
- * kraken : ../node_modules/kraken-node/bin/kraken-node run
+
+## Run the project cypress
+* Sistema operativo windows:
+ ../node_modules/kraken-node/bin/kraken-node run
+* Observaciones: Es necesario tener solo un archivo .feature 
+para correr el de versión 5, cambiar la extensión de la versión 3, por ejemplo .js
  
 ## Run a HTML 
 * Download a live server in visual studio code 
