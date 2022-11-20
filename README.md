@@ -31,9 +31,41 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 
 ## Scenaries : Edit admin's credentials.
 1. When editing admin's name, it is changed and saved successfully
-2. When leaving empty admin's name input, it won't save changes
-3. When editing an email, it can be saved with the correct form
-4. When editing an email, it won't be saved without the correct structure of an e-mail
+```
+  -login
+  -click profile avatar
+  -select third option
+  -modify input name
+  -click on save button
+  - saved succesfully
+```
+3. When leaving empty admin's name input, it won't save changes
+```
+  -login
+  -click profile avatar
+  -select third option
+  -clean input name admin
+  -click on save button
+  -display a validation message  under input name
+```
+5. When editing an email, it can be saved with the correct form
+```
+  -login
+  -click profile avatar
+  -select third option
+  -change the email admin in the input
+  -click on save button
+  - saved succesfully
+```
+7. When editing an email, it won't be saved without the correct structure of an e-mail
+```
+   -login
+  -click profile avatar
+  -select third option
+  -change the email admin in the input with wrong structure
+  -click on save button
+  -display a validation message
+```
 
 ## Scenaries: Search members
 
