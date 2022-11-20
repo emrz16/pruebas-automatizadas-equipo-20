@@ -25,11 +25,7 @@
 * Observaciones: Es necesario tener solo un archivo .feature 
 para correr el de versión 5, cambiar la extensión de la versión 3, por ejemplo .js
  
-## Run a HTML 
-* Download a live server in visual studio code 
-![image](https://user-images.githubusercontent.com/60898371/202727147-c785b827-4157-4b9b-b5e3-c30e54778760.png)
-* And then rigth click on html file and select "Open with live server" 
-<img width="799" alt="live server" src="https://user-images.githubusercontent.com/60898371/202727494-3816da01-4e44-4244-a3b9-94cbdd16a57b.png">
+
 
 ## Scenaries
 
