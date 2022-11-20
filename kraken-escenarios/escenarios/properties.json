@@ -1,12 +1,14 @@
 {
-    "USERNAME_DANIEL": "j.quinchia@uniandes.edu.co",
-    "PASSWORD_DANIEL": "OrionQuinchia",
-    "TITLE":"TITULO",
-    "CONTENT":"Contenido variado",
-    "USERNAME_JULIETH":"j.quinchia@uniandes.edu.co",
-    "PASSWORD_JULIETH": "OrionQuinchia",
-    "USERNAME_EMMANUEL": "j.quinchia@uniandes.edu.co",
-    "PASSWORD_EMMANUEL": "OrionQuinchia",
-    "USERNAME_CRISTINA": "j.quinchia@uniandes.edu.co",
-    "PASSWORD_CRISTINA": "OrionQuinchia"
+  "USERNAME_DANIEL": "j.quinchia@uniandes.edu.co",
+  "PASSWORD_DANIEL": "OrionQuinchia",
+  "TITLE": "TITULO",
+  "CONTENT": "Contenido variado",
+  "USERNAME_JULIETH": "j.quinchia@uniandes.edu.co",
+  "PASSWORD_JULIETH": "OrionQuinchia",
+  "USERNAME_EMMANUEL": "j.quinchia@uniandes.edu.co",
+  "PASSWORD_EMMANUEL": "OrionQuinchia",
+  "USERNAME_CRISTINA": "j.quinchia@uniandes.edu.co",
+  "PASSWORD_CRISTINA": "OrionQuinchia",
+  "USERNAME_GHOST3": "pruebas@gmail.com",
+  "PASSWORD_GHOST3": "pruebas1234"
 }

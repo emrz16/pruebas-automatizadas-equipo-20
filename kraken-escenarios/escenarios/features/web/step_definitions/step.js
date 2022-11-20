@@ -152,6 +152,7 @@ When('I click on user profile', async function () {
     let element = await this.driver.$('.dropdown-menu > li:nth-child(4)');
     return await element.click();
 });
+
 When('I Focus on user name', async function () {
     let element = await this.driver.$('#user-name');
     return await element.click();
@@ -197,55 +198,76 @@ When('I set the time a old time', async function () {
     return await this.driver.$('.gh-date-time-picker-time > input').setValue(newValue);
 });
 
-Then('I click to publish the post',async function(){
+Then('I click to publish the post', async function () {
     let element = await this.driver.$('.gh-publish-trigger');
     return await element.click();
 })
 
-When('I continue publishig',async function(){
+When('I continue publishig', async function () {
     let element = await this.driver.$('.gh-btn-black');
-    return await element.click(); 
+    return await element.click();
 })
 
 // Cristina
-When('I click Filter', async function() {
+When('I click Filter', async function () {
     let element = await this.driver.$('.view-actions .gh-btn:not(.gh-btn-primary):not(.gh-btn-blue):not(.gh-btn-green):not(.gh-btn-link)');
     return await element.click();
 })
-When('I click on List Name', async function() {
+When('I click on List Name', async function () {
     let element = await this.driver.$('.gh-filter-inputgroup > span:nth-child(1)');
     console.log(element);
     return await element.click();
 })
-When('I click on Name', async function() {
+When('I click on Name', async function () {
     let element = await this.driver.$('.gh-select select');
     return await element.click();
 })
-When('I select Name', async function() {
+When('I select Name', async function () {
     let element = await this.driver.$('.gh-select select');
     return await element.click();
 })
-When('I select Email', async function() {
+When('I select Email', async function () {
     let element = await this.driver.$('select[class="ember-view"]');
     return await element.setValue('email');
 })
-When('I click on Apply filters', async function() {
+When('I click on Apply filters', async function () {
     let element = await this.driver.$('.gh-btn-black, .gh-btn-primary');
     return await element.click();
 })
-When('I type on the search bar a non member', async function() {
+When('I type on the search bar a non member', async function () {
     let element = await this.driver.$('.members-header .view-actions input.gh-members-list-searchfield');
     return await element.setValue('Pepe');
 })
-When('I type on the search bar a non member email', async function() {
+When('I type on the search bar a non member email', async function () {
     let element = await this.driver.$('.members-header .view-actions input.gh-members-list-searchfield');
     return await element.setValue('pepe@gmail.com');
 })
-When('I type on the search bar a member email', async function() {
+When('I type on the search bar a member email', async function () {
     let element = await this.driver.$('.members-header .view-actions input.gh-members-list-searchfield');
     return await element.setValue('lala@gmail.com');
 })
-When('I enter incorrect password', async function() {
+When('I enter incorrect password', async function () {
     let element = await this.driver.$('#password');
     return await element.setValue('445566');
 })
+
+//GHOST VERSION 3
+
+When('I enter email v3 {kraken-string}', async function (email) {
+    let element = await this.driver.$('#ember8');
+    return await element.setValue(email);
+});
+
+When('I enter password v3 {kraken-string}', async function (password) {
+    let element = await this.driver.$('#ember10');
+    return await element.setValue(password);
+});
+
+When('I click next v3', async function () {
+    let element = await this.driver.$('#ember12');
+    return await element.click();
+})
+When('I Click in save name v3', async function () {
+    let element = await this.driver.$('.gh-btn-blue.gh-btn.gh-btn-icon.ember-view');
+    return await element.click();
+});
