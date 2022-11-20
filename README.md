@@ -14,7 +14,7 @@
 ## Run the project cypress
 * cypress: run --headless
 
-## Run the project cypress
+## Run the project Kraken
 * Sistema operativo windows:
  ../node_modules/kraken-node/bin/kraken-node run
 * Observaciones: Es necesario tener solo un archivo .feature 
