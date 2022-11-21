@@ -29,6 +29,7 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
  
 ## Run the report
    * cd reporte/resemble
+   * npm install
    * node index.js
    * creara un archivo dentro de la carpeta results/report.html
 
