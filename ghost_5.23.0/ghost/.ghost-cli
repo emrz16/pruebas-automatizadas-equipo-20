@@ -1,6 +1,7 @@
 {
-  "active-version": "5.23.0",
+  "active-version": "5.22.4",
   "cli-version": "1.23.1",
   "channel": "stable",
-  "name": "ghost-local-3"
+  "name": "ghost-local-3",
+  "running": "development"
 }
