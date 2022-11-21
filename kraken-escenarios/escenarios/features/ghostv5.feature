@@ -81,6 +81,22 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
   Then I Click in save name
   And I wait for 2 seconds
 
+  @user5 @web
+Scenario: Como usuario inicio sesion y edito el nombre del administrador
+  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  And I wait for 2 seconds
+  When I enter email "<USERNAME_JULIETH>"
+  And I wait for 1 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 1 seconds
+  And I click next
+  And I wait for 1 seconds
+  And I click in members menu
+  And I wait for 1 seconds
+  And I write a member name "Emmanuel"
+  And I wait for 1 seconds
+
+
   @user6 @web
 Scenario: Como Ghost admin quiero crear post con formato de fecha correcta
   Given I navigate to page "<GHOST_LINK>"
@@ -287,8 +303,7 @@ Scenario: Como Ghost public Admin no me permite continuar con el login, dejando 
   And I click sign in
   And I wait for 5 seconds
 
-  
-@user17 @web
+ @user17 @web
 Scenario: Como Ghost admin, al iniciar sesión, si la contraseña es incorrecta debe indicarlo.
   Given I navigate to page "<GHOST_LINK>"
   And I wait for 5 seconds
@@ -298,4 +313,78 @@ Scenario: Como Ghost admin, al iniciar sesión, si la contraseña es incorrecta 
   And I wait for 4 seconds
   And I click sign in  
   And I wait for 3 seconds
+
+@user18 @web
+Scenario: Como Ghost admin quiero buscar un miembro por su e-mail y encontrarlo con éxito.
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter email "<USERNAME_JULIETH>"
+  And I wait for 2 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 4 seconds
+  And I click sign in  
+  And I wait for 3 seconds
+  And I navigate to page "http://localhost:2368/ghost/#/members"
+  And I wait for 3 seconds
+  And I click Filter
+  And I wait for 3 seconds
+  And I click on List Name
+  And I wait for 3 seconds
+  And I select Email
+  And I wait for 3 seconds
+  And I click on Apply filters
+  And I wait for 2 seconds
+  And I type on the search bar a member email
+  And I wait for 2 seconds
+
+ @user19 @web
+Scenario: Como Ghost admin quiero buscar un miembro por su e-mail y al no existir me indica que no existe.
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter email "<USERNAME_JULIETH>"
+  And I wait for 2 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 4 seconds
+  And I click sign in  
+  And I wait for 3 seconds
+  And I navigate to page "http://localhost:2368/ghost/#/members"
+  And I wait for 3 seconds
+  And I click Filter
+  And I wait for 3 seconds
+  And I click on List Name
+  And I wait for 3 seconds
+  And I select Email
+  And I wait for 3 seconds
+  And I click on Apply filters
+  And I wait for 2 seconds
+  And I type on the search bar a non member email
+  And I wait for 2 seconds
+
+@user20 @web
+Scenario: Como Ghost admin quiero buscar un miembro por su nombre y al no existir me indica que no existe.
+  Given I navigate to page "<GHOST_LINK>"
+  And I wait for 5 seconds
+  And I enter email "<USERNAME_JULIETH>"
+  And I wait for 2 seconds
+  And I enter password "<PASSWORD_JULIETH>"
+  And I wait for 4 seconds
+  And I click sign in  
+  And I wait for 3 seconds
+  And I navigate to page "http://localhost:2368/ghost/#/members"
+  And I wait for 3 seconds
+  And I click Filter
+  And I wait for 3 seconds
+  And I click on Name
+  And I select Name
+  And I click on Apply filters
+  And I wait for 2 seconds
+  And I type on the search bar a non member
+  And I wait for 2 seconds
+
+
+
+ 
+ 
   
+
+

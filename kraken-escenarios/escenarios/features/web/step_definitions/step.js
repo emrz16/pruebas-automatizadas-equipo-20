@@ -337,6 +337,16 @@ Then('I got error message for title', async function () {
     console.log(elem.getText())
 })
 
+When('I enter spaced email v3 {kraken-string}', async function (email) {
+    let element = await this.driver.$('#ember8');
+    return await element.setValue(email);
+});
+
+When('I enter incorrect password v3', async function () {
+    let element = await this.driver.$('#ember10');
+    return await element.setValue('445566');
+})
+
 
 
 
