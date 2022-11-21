@@ -80,6 +80,109 @@ Scenario: Como usuario inicio sesion y edito el nombre del administrador
   Then I Click in save name v3
   And I wait for 2 seconds
 
+
+  @user6 @web
+  Scenario: Como Ghost admin quiero crear post con formato de fecha correcta
+    Given I navigate to page "<GHOST_LINK>"
+    And I wait for 5 seconds
+    And I enter email v3 "<USERNAME_GHOST3>"
+    And I wait for 2 seconds
+    And I enter password v3 "<PASSWORD_GHOST3>"
+    And I wait for 4 seconds
+    And I click next v3  
+    And I wait for 3 seconds
+    And I navigate to page "http://localhost:2368/ghost/#/editor/post"
+    And I wait for 2 seconds
+    And I enter title "<TITLE>"  
+    And I wait for 3 seconds
+    And I write a title to body v3 "<CONTENT>" 
+    And I wait for 2 seconds
+    And I click on post settings v3
+    And I click on hour field
+    And I wait for 2 seconds 
+    And I clear time content 
+    And I enter hour "00:10"
+    And I wait for 2 seconds 
+    And I click on post settings v3
+    Then I click to publish the post v3
+    And I wait for 2 seconds  
+    And I continue publishig v3
+    And I wait for 5 seconds
+  
+    @user7 @web
+  Scenario: Como Ghost admin quiero crear post con formato de fecha incorrecto
+    Given I navigate to page "<GHOST_LINK>"
+    And I wait for 5 seconds
+    And I enter email v3 "<USERNAME_GHOST3>"
+    And I wait for 2 seconds
+    And I enter password v3 "<PASSWORD_GHOST3>"
+    And I wait for 4 seconds
+    And I click next v3  
+    And I wait for 3 seconds
+    And I navigate to page "http://localhost:2368/ghost/#/editor/post"
+    And I wait for 2 seconds 
+    And I enter title "<TITLE>" 
+    And I wait for 2 seconds 
+    And I write a title to body v3 "<CONTENT>" 
+    And I wait for 2 seconds
+    And I click on post settings v3
+    And I click on hour field
+    And I wait for 2 seconds 
+    And I clear time content 
+    And I enter hour "25:00"
+    Then I click on date field
+    And I wait for 5 seconds
+  
+    @user8 @web
+  Scenario: Como Ghost admin no me es permitido crear post con formato de fecha posterior a la actual
+    Given I navigate to page "<GHOST_LINK>"
+    And I wait for 5 seconds
+    And I enter email v3 "<USERNAME_GHOST3>"
+    And I wait for 2 seconds
+    And I enter password v3 "<PASSWORD_GHOST3>"
+    And I wait for 4 seconds
+    And I click next v3
+    And I wait for 3 seconds
+    And I navigate to page "http://localhost:2368/ghost/#/editor/post"
+    And I enter title "<TITLE>"  
+    And I write a title to body v3 "<CONTENT>" 
+    And I wait for 2 seconds
+    And I click on post settings v3
+    And I click on hour field
+    And I wait for 2 seconds  
+    And I clear time content 
+    And I enter hour "23:59"
+    Then I click on date field
+    And I wait for 5 seconds
+    
+    
+   @user9 @web
+  Scenario: Como Ghost admin me permite crear post con formato de fecha anteriores a la actual
+    Given I navigate to page "<GHOST_LINK>"
+    And I wait for 5 seconds
+    And I enter email v3 "<USERNAME_GHOST3>"
+    And I wait for 2 seconds
+    And I enter password v3 "<PASSWORD_GHOST3>"
+    And I wait for 4 seconds
+    And I click next v3  
+    And I wait for 3 seconds
+    And I navigate to page "http://localhost:2368/ghost/#/editor/post"
+    And I wait for 3 seconds
+    And I enter title "<TITLE>"
+    And I wait for 3 seconds
+    And I write a title to body v3 "<CONTENT>" 
+    And I wait for 2 seconds
+    And I click on post settings v3
+    And I wait for 2 seconds
+    And I set the time a old time
+    And I wait for 2 seconds
+    And I click on post settings v3
+    And I wait for 2 seconds
+    Then I click to publish the post v3
+    And I wait for 2 seconds
+    And I continue publishig v3
+    And I wait for 2 seconds
+
 @user9 @web
 Scenario: Como Ghost admin me permite crear post con formato de fecha anteriores a la actual
   Given I navigate to page "<GHOST_LINK>"
