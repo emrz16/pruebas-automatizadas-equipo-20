@@ -116,7 +116,10 @@ async function cypressAnalysis(){
             analysisTime: data.analysisTime,
             imageName: image
           }
+          console.log(pathImageBefore);
+          console.log(pathImageAfter);
           console.log(image);
+          console.log(data.misMatchPercentage);
           fs.writeFileSync(`${config.resultsFolderCypress}/compare-${image}`, data.getBuffer());
         }
       }
@@ -151,7 +154,7 @@ function createReport(cypressInfo, krakenInfo){
           <h2>Kraken</h2>
           ${Object.keys(krakenInfo).map(escenario=>{
             return `
-            <h2 id="${escenario}">Escenario : ${escenario}</h2>
+            <h2 id="${escenario}">${escenario}</h2>
             <div id="visualizer">
               ${Object.keys(krakenInfo[escenario]).map(image => {
                 return imagesCompareKraken(krakenInfo[escenario][image], "kraken");
