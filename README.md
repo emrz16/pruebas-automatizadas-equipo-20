@@ -35,6 +35,7 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
    * npm install
    * node index.js
    * creara un archivo dentro de la carpeta results/report.html
+   * Los escenarios de pruebas escogidos son los que se encuentran en las carpetas de screenshot para cypress, y reporte para kraken, este script ejecuta indiferente a la cantidad de escenarios, ejemplo, si se colacan 40 imagenes se comparan las 40 imagenes, o si son 10 se comparan las 10. 
 
 ## Scenaries
 
