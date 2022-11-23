@@ -20,20 +20,29 @@
 
 
 ## Run the project cypress
-* cypress: run --headless
+```
+  cypress: run --headless
+```
+
 
 ## Run the project Kraken
 * Sistema operativo windows:
- ../node_modules/kraken-node/bin/kraken-node run
+ ```
+  ../node_modules/kraken-node/bin/kraken-node run 
+ ```
+
 * Observaciones: Es necesario tener solo un archivo .feature 
 para correr el de versión 5, cambiar la extensión de la versión 3, por ejemplo a una extesión .js y ejecutar el comando, después hacer lo mismo con el archivo de la versión 3
 
 * Sitema operativo macOS: No es necesario realizar lo anterior
  
 ## Run the report
-   * cd reporte/resemble
-   * npm install
-   * node index.js
+ ```
+    cd reporte/resemble
+    npm install
+    node index.js
+ ```
+ 
    * creara un archivo dentro de la carpeta results/report.html
    * Los escenarios de pruebas escogidos son los que se encuentran en las carpetas de screenshot para cypress, y reporte para kraken, este script ejecuta indiferente a la cantidad de escenarios, ejemplo, si se colacan 40 imagenes se comparan las 40 imagenes, o si son 10 se comparan las 10. 
 
