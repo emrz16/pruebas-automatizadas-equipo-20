@@ -20,20 +20,29 @@
 
 
 ## Run the project cypress
-* cypress: run --headless
+```
+  cypress: run --headless
+```
+
 
 ## Run the project Kraken
 * Sistema operativo windows:
- ../node_modules/kraken-node/bin/kraken-node run
+ ```
+  ../node_modules/kraken-node/bin/kraken-node run 
+ ```
+
 * Observaciones: Es necesario tener solo un archivo .feature 
 para correr el de versión 5, cambiar la extensión de la versión 3, por ejemplo a una extesión .js y ejecutar el comando, después hacer lo mismo con el archivo de la versión 3
 
 * Sitema operativo macOS: No es necesario realizar lo anterior
  
 ## Run the report
-   * cd reporte/resemble
-   * npm install
-   * node index.js
+ ```
+    cd reporte/resemble
+    npm install
+    node index.js
+ ```
+ 
    * creara un archivo dentro de la carpeta results/report.html
    * Los escenarios de pruebas escogidos son los que se encuentran en las carpetas de screenshot para cypress, y reporte para kraken, este script ejecuta indiferente a la cantidad de escenarios, ejemplo, si se colacan 40 imagenes se comparan las 40 imagenes, o si son 10 se comparan las 10. 
 
@@ -80,16 +89,78 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 ## Scenaries: Search members
 
 1. When searching an existing member, by its name, on the search bar, it is found successfully
+```
+   -login
+   -click on members
+   -click on filter
+   -click on Name
+   -Select Name
+   -Click on Apply filters
+   -Type on the search bar a member name
+
+```
 2. When searching a non existing member, by its name, on the search bar, it shows that the member was not found
+```
+   -login
+   -click on members
+   -click on filter
+   -click on Name
+   -Select Name
+   -Click on Apply filters
+   -Type on the search bar a non member name
+
+```
 3. When searching an existing member, by its e-mail, on the search bar, it is found successfully
+```
+   -login
+   -click on members
+   -click on filter
+   -click on List Name
+   -Select Email
+   -Click on Apply filters
+   -Type on the search bar a member email
+
+```
 4. When searching a non existing member, by its e-mail, on the search bar, it shows that the member was not found
+
+```
+   -login
+   -click on members
+   -click on filter
+   -click on List Name
+   -Select Email
+   -Click on Apply filters
+   -Type on the search bar a non member email
+
+```
 
 ## Scenaries: Validation of admin's login credentials
 
 1. When leaving empty admin's email input, the login is not successful
+ ```
+   -Empty email field
+   -Type the correct password
+   -click on sign in
+  ```
 2. When writing the incorrect password on admin's password input, the login is not succesful.
+ ```
+   -Type the email
+   -Type an incorrect password 
+   -click on sign in
+  
+  ```
 3. When writing admin's email without its domain, the login is not successful
+ ```
+   -Type an email without its domain
+   -Type the correct password
+   -click on sign in
+  ```
 4. When writing admin's email without '@', the login is not successful
+ ```
+   -Type an email without @
+   -Type the correct password
+   -click on sign in
+  ```
 
 ## Scenaries: Create a new page 
 
