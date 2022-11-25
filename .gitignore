@@ -2,3 +2,6 @@ kraken-escenarios/node_modules
 proyecto_ghost_v3/ghost/node_modules
 kraken-escenarios/node_modules/*
 reporte/resemble/node_modules/*
+ghost_5.23.0/ghost/current/node_modules
+ghost_5.23.0/ghost/versions/5.22.4/node_modules
+
