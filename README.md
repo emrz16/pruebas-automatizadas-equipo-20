@@ -89,16 +89,78 @@ para correr el de versión 5, cambiar la extensión de la versión 3, por ejempl
 ## Scenaries: Search members
 
 1. When searching an existing member, by its name, on the search bar, it is found successfully
+```
+   -login
+   -click on members
+   -click on filter
+   -click on Name
+   -Select Name
+   -Click on Apply filters
+   -Type on the search bar a member name
+
+```
 2. When searching a non existing member, by its name, on the search bar, it shows that the member was not found
+```
+   -login
+   -click on members
+   -click on filter
+   -click on Name
+   -Select Name
+   -Click on Apply filters
+   -Type on the search bar a non member name
+
+```
 3. When searching an existing member, by its e-mail, on the search bar, it is found successfully
+```
+   -login
+   -click on members
+   -click on filter
+   -click on List Name
+   -Select Email
+   -Click on Apply filters
+   -Type on the search bar a member email
+
+```
 4. When searching a non existing member, by its e-mail, on the search bar, it shows that the member was not found
+
+```
+   -login
+   -click on members
+   -click on filter
+   -click on List Name
+   -Select Email
+   -Click on Apply filters
+   -Type on the search bar a non member email
+
+```
 
 ## Scenaries: Validation of admin's login credentials
 
 1. When leaving empty admin's email input, the login is not successful
+ ```
+   -Empty email field
+   -Type the correct password
+   -click on sign in
+  ```
 2. When writing the incorrect password on admin's password input, the login is not succesful.
+ ```
+   -Type the email
+   -Type an incorrect password 
+   -click on sign in
+  
+  ```
 3. When writing admin's email without its domain, the login is not successful
+ ```
+   -Type an email without its domain
+   -Type the correct password
+   -click on sign in
+  ```
 4. When writing admin's email without '@', the login is not successful
+ ```
+   -Type an email without @
+   -Type the correct password
+   -click on sign in
+  ```
 
 ## Scenaries: Create a new page 
 
