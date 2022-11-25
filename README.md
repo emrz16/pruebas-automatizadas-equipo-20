@@ -1,6 +1,7 @@
 ## Estrategias de datos para pruebas en cypress 
 * Se corre en la version 5.22.4 de ghost 
 Información detallada: 
+![image](https://user-images.githubusercontent.com/60898371/204042967-54fa1d1e-60ea-4b17-bdf5-102d1f2c0c74.png)
 
 ## Data pool a priori
 ![image](https://user-images.githubusercontent.com/60898371/203427882-38636004-9ac3-4f91-ab57-be87a54baa74.png)
