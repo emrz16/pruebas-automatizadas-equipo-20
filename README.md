@@ -6,8 +6,11 @@ Información detallada:
 ![image](https://user-images.githubusercontent.com/60898371/204057572-5eca6cf0-cff8-466d-9964-7e2ec7f8616b.png)
 
 
-## Data pool a priori
-![image](https://user-images.githubusercontent.com/60898371/203427882-38636004-9ac3-4f91-ab57-be87a54baa74.png)
+## pool de datos a priori
+![image](https://user-images.githubusercontent.com/60898371/204113518-ca25bfe4-67d4-4581-b2e9-d55baf2fe4ac.png)
+
+##  Pool de datos (pseudo) aleatorio dinámico
+*url para Pages y Post : https://my.api.mockaroo.com/pages.json?key=a7166340
 
 ## Settings
 * Kraken version: ^1.0.24"
