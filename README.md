@@ -12,6 +12,9 @@ Información detallada:
 ##  Pool de datos (pseudo) aleatorio dinámico
 *url para Pages y Post : https://my.api.mockaroo.com/pages.json?key=a7166340
 
+##  Escenario aleatorio
+* Se utiliza la libreria de faker 
+
 ## Settings
 * Kraken version: ^1.0.24"
 * Node version: 14.18.2
