@@ -7,8 +7,10 @@ describe('Profile tests', () => {
     const loginPage = new LoginPage();
     const homePage = new HomePage();
     const profilePage = new ProfilePage();
-    const user = "pruebas@gmail.com"; //e.rodriguezz@uniandes.edu.co
-    const password = "pruebas1234"; // pruebas1234
+    const user = "j.quinchia@uniandes.edu.co";
+    const password = "OrionQuinchia";
+    // const user = "e.rodriguezz@uniandes.edu.co";
+    // const password = "ezamora16101998";
     beforeEach(() => {
         cy.visit('http://localhost:2368/ghost/');
         cy.wait(1000);

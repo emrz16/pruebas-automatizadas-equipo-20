@@ -5,13 +5,14 @@ import SettingsPage from './pageObjects/SettingsPage';
 import {faker} from '@faker-js/faker';
 import SettingsNavigationPage from './pageObjects/SettingsNavigationPage';
 
-describe('Profile tests', () => {
+describe('Settings navigation test', () => {
     const loginPage = new LoginPage();
     const homePage = new HomePage();
     const profilePage = new ProfilePage();
     const settingsPage = new SettingsPage();
     const settingsNavigationPage = new SettingsNavigationPage();
-
+    const user = "j.quinchia@uniandes.edu.co";
+    const password = "OrionQuinchia";
     const url = 'http://localhost:2368/ghost/';
     beforeEach(() => {
         cy.visit(url);
@@ -20,8 +21,8 @@ describe('Profile tests', () => {
         cy.get('form').within(() => {
             // loginPage.getEmail().type('pruebas@gmail.com');
             // loginPage.getPassword().type('pruebas1234');
-            loginPage.getEmail().type('pruebas@gmail.com');
-            loginPage.getPassword().type('pruebas1234');
+            loginPage.getEmail().type(user);
+            loginPage.getPassword().type(password);
             loginPage.getLoginButton().click();
         })
         cy.wait(1000);

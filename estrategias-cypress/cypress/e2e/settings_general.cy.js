@@ -4,14 +4,14 @@ import ProfilePage from './pageObjects/ProfilePage';
 import SettingsPage from './pageObjects/SettingsPage';
 import {faker} from '@faker-js/faker';
 
-describe('Profile tests', () => {
+describe('Settings general test', () => {
     const loginPage = new LoginPage();
     const homePage = new HomePage();
     const profilePage = new ProfilePage();
     const settingsPage = new SettingsPage();
 
-    const user = "e.rodriguezz@uniandes.edu.co";
-    const password = "ezamora16101998";
+    const user = "pruebas@gmail.com";
+    const password = "pruebas1234";
         // loginPage.getEmail().type('pruebas@gmail.com');
             // loginPage.getPassword().type('pruebas1234');
     const url = 'http://localhost:2368/ghost/';
