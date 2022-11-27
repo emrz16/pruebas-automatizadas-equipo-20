@@ -86,6 +86,10 @@ class CreatePage {
    getListTwittercard(){
     return cy.contains('Twitter card')
    }
+
+   getFacebookCard(){
+    return cy.contains('Facebook card')
+   }
 }
 
 export default CreatePage;

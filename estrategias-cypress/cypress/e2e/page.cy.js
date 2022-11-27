@@ -104,16 +104,16 @@ describe('Create a pages', () => {
             createPage.getTextareaPageTitle().type(data_a_priori[1].title)
             cy.wait(2000);
             createPage.getTextareaPageTitle().click();
-            createPage.getArticleEditor().type(data_a_priori[0].body)         
+            createPage.getArticleEditor().type(data_a_priori[0].body)
             cy.wait(2000)
         })
 
         cy.wait(2000)
         createPage.getButtonPublish().click();
-        cy.wait(2000)      
+        cy.wait(2000)
     })
 
-    it('#4: Create a page and display a message cause title exceed 255 characters', () => {     
+    it('#4: Create a page and display a message cause title exceed 255 characters', () => {
         createPage.getSection().should('be.visible').within(() => {
             cy.wait(1000);
             cy.contains('Pages').click();
@@ -135,7 +135,7 @@ describe('Create a pages', () => {
         })
 
         createPage.getButtonPublish().click();
-        cy.wait(1000);     
+        cy.wait(1000);
         createPage.getArticleAlert().contains('Validation failed: Title cannot be longer than 255 characters')
         cy.wait(1000);
     })
@@ -165,20 +165,20 @@ describe('Create a pages', () => {
         createPage.getSettingsContainer().should('be.visible').within(() => {
             cy.contains('Continue, final review →').click();
             cy.wait(1000);
-            cy.contains('Publish page, right now').click();           
+            cy.contains('Publish page, right now').click();
         })
 
         cy.get('.gh-publish-settings-container').should('be.visible').within(() => {
             createPage.getButtonBackToEditor().click();
-            cy.wait(2000);   
+            cy.wait(2000);
 
 
         })
-        createPage.getEditorPane().should('be.visible').within(() => {            
+        createPage.getEditorPane().should('be.visible').within(() => {
             createPage.getTextareaPageTitle().clear()
-            cy.wait(1000);  
+            cy.wait(1000);
             createPage.getTextareaPageTitle().type(data_a_priori[2].title);
-            cy.wait(1000);         
+            cy.wait(1000);
         })
         cy.wait(1000);
         createPage.getElementByText().click();
@@ -192,8 +192,8 @@ describe('Create a pages', () => {
             cy.wait(1000);
         })
 
-        createPage.getMenuAndSelectPublishedPages().click();      
-        cy.wait(1000) 
+        createPage.getMenuAndSelectPublishedPages().click();
+        cy.wait(1000)
 
         cy.get('ul.ember-power-select-options').should('be.visible').within(() => {
             cy.get('li.ember-power-select-option').contains('Published pages').click()
@@ -205,15 +205,15 @@ describe('Create a pages', () => {
             cy.wait(1000)
         })
 
-        createPage.getEditorPane().should('be.visible').within(() => {         
+        createPage.getEditorPane().should('be.visible').within(() => {
 
             cy.wait(1000);
             createPage.getTextareaPageTitle().clear();
             cy.wait(1000)
             createPage.getTextareaPageTitle().type(data_a_priori[getRandomNumber()].title)
-            cy.wait(1000)      
-            createPage. getElementByText().click();     
-        })   
+            cy.wait(1000)
+            createPage.getElementByText().click();
+        })
 
     })
 
@@ -231,7 +231,7 @@ describe('Create a pages', () => {
 
         cy.get('div.settings-menu-pane').should('be.visible').within(() => {
             cy.get('div.gh-date-time-picker-time').find('input').within((element) => {
-                let textValue = data_a_priori[getRandomNumber()].time;               
+                let textValue = data_a_priori[getRandomNumber()].time;
                 cy.wait(2000);
                 element.val(textValue)
                 cy.wait(5000)
@@ -299,7 +299,7 @@ describe('Create a pages', () => {
         cy.get('button.settings-menu-toggle').click();
 
         cy.get('div.settings-menu-pane').should('be.visible').within(() => {
-            cy.get('textarea.post-setting-custom-excerpt.ember-text-area.gh-input.ember-view').type(faker.random.words(100))          
+            cy.get('textarea.post-setting-custom-excerpt.ember-text-area.gh-input.ember-view').type(faker.random.words(100))
         })
         cy.get('button.settings-menu-toggle').click();
         cy.wait(2000);
@@ -324,7 +324,7 @@ describe('Create a pages', () => {
         cy.get('button.settings-menu-toggle').click();
 
         cy.get('div.settings-menu-pane').should('be.visible').within(() => {
-            cy.get('input.post-setting-slug.ember-text-field.gh-input.ember-view').type(faker.random.words(100))          
+            cy.get('input.post-setting-slug.ember-text-field.gh-input.ember-view').type(faker.random.words(100))
         })
         cy.get('button.settings-menu-toggle').click();
         cy.wait(2000);
@@ -349,7 +349,7 @@ describe('Create a pages', () => {
         cy.get('button.settings-menu-toggle').click();
 
         cy.get('div.settings-menu-pane').should('be.visible').within(() => {
-            cy.get('input.post-setting-slug.ember-text-field.gh-input.ember-view').type(faker.random.words(10))          
+            cy.get('input.post-setting-slug.ember-text-field.gh-input.ember-view').type(faker.random.words(10))
         })
         cy.get('button.settings-menu-toggle').click();
         cy.wait(2000);
@@ -373,7 +373,7 @@ describe('Create a pages', () => {
         })
         cy.get('button.settings-menu-toggle').click();
         cy.get('div.settings-menu-pane').scrollTo('bottom')
-        cy.wait(1000);       
+        cy.wait(1000);
         createPage.getListMetada().click();
 
         cy.get('div.settings-menu-content').should('be.visible').within(() => {
@@ -413,7 +413,7 @@ describe('Create a pages', () => {
         })
         cy.get('button.settings-menu-toggle').click();
         cy.get('div.settings-menu-pane').scrollTo('bottom')
-        cy.wait(1000);       
+        cy.wait(1000);
         createPage.getListMetada().click();
 
         cy.get('div.settings-menu-content').should('be.visible').within(() => {
@@ -427,10 +427,10 @@ describe('Create a pages', () => {
         })
         cy.get('button.settings-menu-toggle').click();
         cy.wait(2000);
-        createPage.getButtonPublish().click(); 
+        createPage.getButtonPublish().click();
     })
 
-      it('#14:Crear una página y modificar la metada de la página con un title mayor a 255 caracteres', () => {
+    it('#14:Crear una página y modificar la metada de la página con un title mayor a 255 caracteres', () => {
         createPage.getSection().should('be.visible').within(() => {
             cy.contains('Pages').click();
             cy.wait(1000);
@@ -447,7 +447,7 @@ describe('Create a pages', () => {
         })
         cy.get('button.settings-menu-toggle').click();
         cy.get('div.settings-menu-pane').scrollTo('bottom')
-        cy.wait(1000);       
+        cy.wait(1000);
         createPage.getListMetada().click();
 
         cy.get('div.settings-menu-content').should('be.visible').within(() => {
@@ -461,10 +461,10 @@ describe('Create a pages', () => {
         })
         cy.get('button.settings-menu-toggle').click();
         cy.wait(2000);
-        createPage.getButtonPublish().click(); 
+        createPage.getButtonPublish().click();
     })
 
-      it('#14: Cretae a page and modify metada invalid url canonica', () => {
+    it('#14: Cretae a page and modify metada invalid url canonica', () => {
         createPage.getSection().should('be.visible').within(() => {
             cy.contains('Pages').click();
             cy.wait(1000);
@@ -481,7 +481,7 @@ describe('Create a pages', () => {
         })
         cy.get('button.settings-menu-toggle').click();
         cy.get('div.settings-menu-pane').scrollTo('bottom')
-        cy.wait(1000);       
+        cy.wait(1000);
         createPage.getListMetada().click();
 
         cy.get('div.settings-menu-content').should('be.visible').within(() => {
@@ -495,7 +495,7 @@ describe('Create a pages', () => {
         })
         cy.get('button.settings-menu-toggle').click();
         cy.wait(2000);
-        createPage.getButtonPublish().click(); 
+        createPage.getButtonPublish().click();
     })
 
     it('#15: Crear una página y modificar la metada de la página con un meta description mayor a 255 caracteres:', () => {
@@ -564,9 +564,9 @@ describe('Create a pages', () => {
 
             }).then((res) => {
                 console.log(res)
-                cy.get('input.post-setting-twitter-title.ember-text-field.gh-input ember-view').type(res.body[1].body)
+                cy.get('input.post-setting-twitter-title.ember-text-field.gh-input.ember-view').type(res.body[1].title)
                 cy.wait(1000);
-                cy.get('textarea.post-setting-twitter-description.ember-text-area.gh-input.ember-view').type(res.body[2].body)
+                cy.get('textarea.post-setting-twitter-description.ember-text-area.gh-input.ember-view').type(res.body[1].body)
             })
         })
         cy.get('button.settings-menu-toggle').click();
@@ -580,5 +580,231 @@ describe('Create a pages', () => {
         })
     })
 
+    it('#17:Crear una página y modificar Twitter card title con menos de 300 caracteres y description con mas de 300 caracteres', () => {
+        createPage.getSection().should('be.visible').within(() => {
+            cy.contains('Pages').click();
+            cy.wait(1000);
+        })
+        createPage.getMain().should('be.visible').within(() => {
+            cy.contains('New page').click()
+            cy.wait(1000)
+        })
+        createPage.getEditorPane().should('be.visible').within(() => {
+            createPage.getTextareaPageTitle().clear()
+            cy.wait(1000);
+            createPage.getTextareaPageTitle().type(data_a_priori[2].title);
+            cy.wait(1000);
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.get('div.settings-menu-pane').scrollTo('bottom')
+        cy.wait(1000);
+        createPage.getListTwittercard().click();
 
+        cy.get('div.settings-menu-content').should('be.visible').within(() => {
+            cy.request({
+                url: 'https://my.api.mockaroo.com/pages.json?key=a7166340',
+
+            }).then((res) => {
+                console.log(res)
+                cy.get('input.post-setting-twitter-title.ember-text-field.gh-input.ember-view').type(res.body[1].body)
+                cy.wait(1000);
+                cy.get('textarea.post-setting-twitter-description.ember-text-area.gh-input.ember-view').type(res.body[1].title)
+            })
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.wait(1000);
+        createPage.getButtonPublish().click();
+        cy.wait(1000);
+        createPage.getSettingsContainer().should('be.visible').within(() => {
+            cy.contains('Continue, final review →').click();
+            cy.wait(1000);
+            cy.contains('Publish page, right now').click();
+        })
+    })
+
+    it('#18: Crear una página y modificar Twitter card title con menos de 300 caracteres y description con menos de 300 caracteres y adjuntar imagen con extension correcta', () => {
+        createPage.getSection().should('be.visible').within(() => {
+            cy.contains('Pages').click();
+            cy.wait(1000);
+        })
+        createPage.getMain().should('be.visible').within(() => {
+            cy.contains('New page').click()
+            cy.wait(1000)
+        })
+        createPage.getEditorPane().should('be.visible').within(() => {
+            createPage.getTextareaPageTitle().clear()
+            cy.wait(1000);
+            createPage.getTextareaPageTitle().type(data_a_priori[2].title);
+            cy.wait(1000);
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.get('div.settings-menu-pane').scrollTo('bottom')
+        cy.wait(1000);
+        createPage.getListTwittercard().click();
+
+        cy.get('div.settings-menu-content').should('be.visible').within(() => {
+            cy.request({
+                url: 'https://my.api.mockaroo.com/pages.json?key=a7166340',
+
+            }).then((res) => {
+                console.log(res)
+                cy.get('input.post-setting-twitter-title.ember-text-field.gh-input.ember-view').type(res.body[3].title)
+                cy.wait(1000);
+                cy.get('textarea.post-setting-twitter-description.ember-text-area.gh-input.ember-view').type(res.body[3].title)
+                cy.wait(1000);
+                cy.get('input[type=file]').selectFile('cypress/fixtures/piramide-imagen.png', { force: true })
+            })
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.wait(1000);
+        createPage.getButtonPublish().click();
+        cy.wait(1000);
+        createPage.getSettingsContainer().should('be.visible').within(() => {
+            cy.contains('Continue, final review →').click();
+            cy.wait(1000);
+            cy.contains('Publish page, right now').click();
+        })
+    })
+
+    it('#19: Crear una página y modificar Twitter card title con menos de 300 caracteres y description con menos de 300 caracteres y adjuntar imagen con extensión incorrecta', () => {
+        createPage.getSection().should('be.visible').within(() => {
+            cy.contains('Pages').click();
+            cy.wait(1000);
+        })
+        createPage.getMain().should('be.visible').within(() => {
+            cy.contains('New page').click()
+            cy.wait(1000)
+        })
+        createPage.getEditorPane().should('be.visible').within(() => {
+            createPage.getTextareaPageTitle().clear()
+            cy.wait(1000);
+            createPage.getTextareaPageTitle().type(data_a_priori[2].title);
+            cy.wait(1000);
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.get('div.settings-menu-pane').scrollTo('bottom')
+        cy.wait(1000);
+        createPage.getListTwittercard().click();
+
+        cy.get('div.settings-menu-content').should('be.visible').within(() => {
+            cy.request({
+                url: 'https://my.api.mockaroo.com/pages.json?key=a7166340',
+
+            }).then((res) => {
+                console.log(res)
+                cy.get('input[type=file]').selectFile('cypress/fixtures/Archivo prueba.docx', { force: true })
+                cy.wait(1000);
+                cy.get('input.post-setting-twitter-title.ember-text-field.gh-input.ember-view').type(res.body[3].title)
+                cy.wait(1000);
+                cy.get('textarea.post-setting-twitter-description.ember-text-area.gh-input.ember-view').type(res.body[3].title)
+                cy.wait(1000);
+
+            })
+        })
+    })
+
+    it('#20: Crear una página y modificar facebook card, modificar title con mas de 300 caracteres y description con menos de 300 caracteres', () => {
+        createPage.getSection().should('be.visible').within(() => {
+            cy.contains('Pages').click();
+            cy.wait(1000);
+        })
+        createPage.getMain().should('be.visible').within(() => {
+            cy.contains('New page').click()
+            cy.wait(1000)
+        })
+        createPage.getEditorPane().should('be.visible').within(() => {
+            createPage.getTextareaPageTitle().clear()
+            cy.wait(1000);
+            createPage.getTextareaPageTitle().type(data_a_priori[2].title);
+            cy.wait(1000);
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.get('div.settings-menu-pane').scrollTo('bottom')
+        cy.wait(1000);
+        createPage.getFacebookCard().click();
+
+        cy.get('div.settings-menu-content').should('be.visible').within(() => {
+            cy.wait(1000);
+            cy.get('input.post-setting-og-title.ember-text-field.gh-input.ember-view').type(faker.random.words(50))
+            cy.wait(1000);
+            cy.get('textarea.post-setting-og-description.ember-text-area.gh-input.ember-view').type(faker.random.words(2))
+            cy.wait(1000);
+
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.wait(1000);
+        createPage.getButtonPublish().click();
+    })
+
+    it('#21: Crear una página y modificar facebook card, modificar title con mas de 300 caracteres y description con menos de 300 caracteres', () => {
+        createPage.getSection().should('be.visible').within(() => {
+            cy.contains('Pages').click();
+            cy.wait(1000);
+        })
+        createPage.getMain().should('be.visible').within(() => {
+            cy.contains('New page').click()
+            cy.wait(1000)
+        })
+        createPage.getEditorPane().should('be.visible').within(() => {
+            createPage.getTextareaPageTitle().clear()
+            cy.wait(1000);
+            createPage.getTextareaPageTitle().type(data_a_priori[2].title);
+            cy.wait(1000);
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.get('div.settings-menu-pane').scrollTo('bottom')
+        cy.wait(1000);
+        createPage.getFacebookCard().click();
+
+        cy.get('div.settings-menu-content').should('be.visible').within(() => {
+            cy.wait(1000);
+            cy.get('input.post-setting-og-title.ember-text-field.gh-input.ember-view').type(faker.random.words(2))
+            cy.wait(1000);
+            cy.get('textarea.post-setting-og-description.ember-text-area.gh-input.ember-view').type(faker.random.words(100))
+            cy.wait(1000);
+
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.wait(1000);
+        createPage.getButtonPublish().click();
+    })
+
+    it('#22: Crear una página y modificar facebook card, modificar title con menos de 300 caracteres y description con menos de 300 caracteres', () => {
+        createPage.getSection().should('be.visible').within(() => {
+            cy.contains('Pages').click();
+            cy.wait(1000);
+        })
+        createPage.getMain().should('be.visible').within(() => {
+            cy.contains('New page').click()
+            cy.wait(1000)
+        })
+        createPage.getEditorPane().should('be.visible').within(() => {
+            createPage.getTextareaPageTitle().clear()
+            cy.wait(1000);
+            createPage.getTextareaPageTitle().type(data_a_priori[2].title);
+            cy.wait(1000);
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.get('div.settings-menu-pane').scrollTo('bottom')
+        cy.wait(1000);
+        createPage.getFacebookCard().click();
+
+        cy.get('div.settings-menu-content').should('be.visible').within(() => {
+            cy.wait(1000);
+            cy.get('input.post-setting-og-title.ember-text-field.gh-input.ember-view').type(faker.random.words(2))
+            cy.wait(1000);
+            cy.get('textarea.post-setting-og-description.ember-text-area.gh-input.ember-view').type(faker.random.words(2))
+            cy.wait(1000);
+
+        })
+        cy.get('button.settings-menu-toggle').click();
+        cy.wait(1000);
+        createPage.getButtonPublish().click();
+        cy.wait(1000);
+        createPage.getSettingsContainer().should('be.visible').within(() => {
+            cy.contains('Continue, final review →').click();
+            cy.wait(1000);
+            cy.contains('Publish page, right now').click();
+        })
+    })
 })
