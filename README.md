@@ -8,6 +8,9 @@ Información detallada:
 
 ## pool de datos a priori
 ![image](https://user-images.githubusercontent.com/60898371/204113518-ca25bfe4-67d4-4581-b2e9-d55baf2fe4ac.png)
+![image](https://user-images.githubusercontent.com/54257496/204153194-5ee23ed7-046d-4311-b084-1960210de519.png)
+![image](https://user-images.githubusercontent.com/54257496/204153265-fc9f5347-6c6d-4ca8-bb9c-1d4dcb9e4525.png)
+
 
 ##  Pool de datos (pseudo) aleatorio dinámico
 * url para Pages y Post : https://my.api.mockaroo.com/pages.json?key=a7166340
