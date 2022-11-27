@@ -1,7 +1,7 @@
-import LoginPage from './pageObjects/LoginPage';
-import HomePage from './pageObjects/HomePage';
-import ProfilePage from './pageObjects/ProfilePage';
-import SettingsPage from './pageObjects/SettingsPage';
+import LoginPage from './pageObject/LoginPage';
+import HomePage from './pageObject/HomePage';
+import ProfilePage from './pageObject/ProfilePage';
+import SettingsPage from './pageObject/SettingsPage';
 import {faker} from '@faker-js/faker';
 
 describe('Settings general test', () => {
@@ -10,10 +10,10 @@ describe('Settings general test', () => {
     const profilePage = new ProfilePage();
     const settingsPage = new SettingsPage();
 
-    const user = "pruebas@gmail.com";
-    const password = "pruebas1234";
-        // loginPage.getEmail().type('pruebas@gmail.com');
-            // loginPage.getPassword().type('pruebas1234');
+    // const user = "j.quinchia@uniandes.edu.co";
+    // const password = "OrionQuinchia";
+    const user = "e.rodriguezz@uniandes.edu.co";
+    const password = "ezamora16101998";
     const url = 'http://localhost:2368/ghost/';
     beforeEach(() => {
         cy.visit(url);

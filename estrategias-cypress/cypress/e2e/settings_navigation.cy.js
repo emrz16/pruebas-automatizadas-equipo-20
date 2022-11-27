@@ -1,9 +1,9 @@
-import LoginPage from './pageObjects/LoginPage';
-import HomePage from './pageObjects/HomePage';
-import ProfilePage from './pageObjects/ProfilePage';
-import SettingsPage from './pageObjects/SettingsPage';
+import LoginPage from './pageObject/LoginPage';
+import HomePage from './pageObject/HomePage';
+import ProfilePage from './pageObject/ProfilePage';
+import SettingsPage from './pageObject/SettingsPage';
 import {faker} from '@faker-js/faker';
-import SettingsNavigationPage from './pageObjects/SettingsNavigationPage';
+import SettingsNavigationPage from './pageObject/SettingsNavigationPage';
 
 describe('Settings navigation test', () => {
     const loginPage = new LoginPage();
@@ -13,6 +13,8 @@ describe('Settings navigation test', () => {
     const settingsNavigationPage = new SettingsNavigationPage();
     const user = "j.quinchia@uniandes.edu.co";
     const password = "OrionQuinchia";
+    // const user = "e.rodriguezz@uniandes.edu.co";
+    // const password = "ezamora16101998";
     const url = 'http://localhost:2368/ghost/';
     beforeEach(() => {
         cy.visit(url);

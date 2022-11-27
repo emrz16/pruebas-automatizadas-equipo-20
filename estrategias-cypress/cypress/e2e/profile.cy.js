@@ -1,6 +1,6 @@
-import LoginPage from './pageObjects/LoginPage';
-import HomePage from './pageObjects/HomePage';
-import ProfilePage from './pageObjects/ProfilePage';
+import LoginPage from './pageObject/LoginPage';
+import HomePage from './pageObject/HomePage';
+import ProfilePage from './pageObject/ProfilePage';
 import {faker} from '@faker-js/faker'
 import data_a_priority from '../../../data_pool_a_priori/MOCK_DATA_SETTINGS.json';
 describe('Profile tests', () => {
@@ -200,7 +200,7 @@ describe('Profile tests', () => {
         profilePage.getTextVerifyPassword().clear();
         profilePage.getTextVerifyPassword().type(password);
         profilePage.getButtonChangePassword().click();
-        cy.contains("");
+        cy.contains("Password updated");
     })
 
     it('Incorrect verify password', () => {
