@@ -14,7 +14,6 @@ describe('Profile tests', () => {
     beforeEach(() => {
         cy.visit('http://localhost:2368/ghost/');
         cy.wait(1000);
-        cy.get('div.gh-flow').screenshot('loginV5');
         cy.get('form').within(() => {
             // loginPage.getEmail().type('pruebas@gmail.com');
             // loginPage.getPassword().type('pruebas1234');

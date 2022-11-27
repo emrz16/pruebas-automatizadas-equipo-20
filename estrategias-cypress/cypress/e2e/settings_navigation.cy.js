@@ -19,7 +19,6 @@ describe('Settings navigation test', () => {
     beforeEach(() => {
         cy.visit(url);
         cy.wait(1000);
-        cy.get('div.gh-flow').screenshot('loginV5');
         cy.get('form').within(() => {
             // loginPage.getEmail().type('pruebas@gmail.com');
             // loginPage.getPassword().type('pruebas1234');

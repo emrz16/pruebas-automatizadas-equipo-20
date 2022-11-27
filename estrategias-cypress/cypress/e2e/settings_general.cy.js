@@ -10,15 +10,14 @@ describe('Settings general test', () => {
     const profilePage = new ProfilePage();
     const settingsPage = new SettingsPage();
 
-    // const user = "j.quinchia@uniandes.edu.co";
-    // const password = "OrionQuinchia";
-    const user = "e.rodriguezz@uniandes.edu.co";
-    const password = "ezamora16101998";
+    const user = "j.quinchia@uniandes.edu.co";
+    const password = "OrionQuinchia";
+    // const user = "e.rodriguezz@uniandes.edu.co";
+    // const password = "ezamora16101998";
     const url = 'http://localhost:2368/ghost/';
     beforeEach(() => {
         cy.visit(url);
         cy.wait(1000);
-        cy.get('div.gh-flow').screenshot('loginV5');
         cy.get('form').within(() => {
         
             loginPage.getEmail().type(user);
