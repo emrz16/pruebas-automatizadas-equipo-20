@@ -10,7 +10,7 @@ Información detallada:
 ![image](https://user-images.githubusercontent.com/60898371/204113518-ca25bfe4-67d4-4581-b2e9-d55baf2fe4ac.png)
 
 ##  Pool de datos (pseudo) aleatorio dinámico
-*url para Pages y Post : https://my.api.mockaroo.com/pages.json?key=a7166340
+* url para Pages y Post : https://my.api.mockaroo.com/pages.json?key=a7166340
 
 ##  Escenario aleatorio
 * Se utiliza la libreria de faker 
