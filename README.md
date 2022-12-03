@@ -7,16 +7,20 @@ Información detallada:
 
 
 ## pool de datos a priori
+Para la realización de los datos a priori se utilizo la aplicación https://www.mockaroo.com/ , se cambian los nombres de las variables, y se seleccionan los tipos de datos que queremos que tengas estás variables, una vez construido esto, se exporta los datos en un archivo json, y se lee desde cada una de las pruebas e2e.
+
 ![image](https://user-images.githubusercontent.com/60898371/204113518-ca25bfe4-67d4-4581-b2e9-d55baf2fe4ac.png)
 ![image](https://user-images.githubusercontent.com/54257496/204153194-5ee23ed7-046d-4311-b084-1960210de519.png)
 ![image](https://user-images.githubusercontent.com/54257496/204153265-fc9f5347-6c6d-4ca8-bb9c-1d4dcb9e4525.png)
 
 
 ##  Pool de datos (pseudo) aleatorio dinámico
+Por medio de la aplicación https://www.mockaroo.com/ se construye un api de consumo, inicialmente se realiza el mismo procedimiento, se nombran las variables, se escogen los tipos de datos y en la parte superior está la opción de realizar un "mock apis" con el esquema creado, y al generarlo, lanza una url la cual se le puede hacer solicitudes https desde el código, está se implementa en los pruebas e2e de cypress.
+
 * url para Pages y Post : https://my.api.mockaroo.com/pages.json?key=a7166340
 
 ##  Escenario aleatorio
-* Se utiliza la libreria de faker 
+Se hace una inslación de la librería faker en el proyecto, y se utiliza la documentación para hacer la implementación de los datos aleatorios en las pruebas e2e de cypress.
 
 ## Settings
 * Kraken version: ^1.0.24"
