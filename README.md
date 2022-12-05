@@ -1,3 +1,21 @@
+## Esecenarios seleccionados para la estrategia de pruebas 
+| Funcionalidad  |Escenario | enlace |
+| ------------- | ------------- ||
+| Crear post  | Crear un post correctamente, ingresar title y description correctamente  |[#1] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|
+| Crear post  | Crear un post con titulo mayor a 255 caracteres: |[#2] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|
+| Crear post  | Crear un post con titulo menor a 255 caracteres  |[#3] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|
+| Crear post    |Crear un post con titulo menor a 255 caracteres y adjuntar imagen con extensión incorrecta|
+|Crear post | Editar un post después de crear y dar clic en update |[#4] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)| 
+|Crear post | Editar un post creado dando clic al botón de estadísticas: |[#5] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|
+|Crear post | Crear post y modificar el contenido de Excerpt con mas de 300 caracteres |[#6] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)| 
+|Crear post | Crear post y modificar el contenido de Excerpt con menos de 300 caracteres |[#7] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)| 
+
+
+
+ 
+
+
+
 ## Estrategias de datos para pruebas en cypress 
 * Se corre en la version 5.22.4 de ghost 
 Información detallada: 
