@@ -25,8 +25,8 @@
  
 ## correr los escenarios con la estrategia VRT 
 * Existe una carpeta ghost 5 y ghost 3, en cada uno están los screenshots para realización de las comparaciones. 
-carpeta version 5: https://github.com/emrz16/pruebas-automatizadas-equipo-20/tree/master/cypress-escenarios/cypress/e2e/ghost-5
-carpeta version 3: https://github.com/emrz16/pruebas-automatizadas-equipo-20/tree/master/cypress-escenarios/cypress/e2e/ghost-3
+  * carpeta version 5: https://github.com/emrz16/pruebas-automatizadas-equipo-20/tree/master/cypress-escenarios/cypress/e2e/ghost-5
+  * carpeta version 3: https://github.com/emrz16/pruebas-automatizadas-equipo-20/tree/master/cypress-escenarios/cypress/e2e/ghost-3
 
 
 ## Estrategias de datos para pruebas en cypress 
