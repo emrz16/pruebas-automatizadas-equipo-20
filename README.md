@@ -1,6 +1,6 @@
 ## Esecenarios seleccionados para la estrategia de pruebas 
 | Funcionalidad  |Escenario | enlace |
-| ------------- | ------------- ||
+| ------------- | ------------- |-------|
 | Crear post  | Crear un post correctamente, ingresar title y description correctamente  |[#1] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|
 | Crear post  | Crear un post con titulo mayor a 255 caracteres: |[#2] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|
 | Crear post  | Crear un post con titulo menor a 255 caracteres  |[#3] (https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|
