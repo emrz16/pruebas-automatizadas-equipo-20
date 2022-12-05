@@ -23,7 +23,10 @@
 |Crear nuevo miembro|  Add member with note | [20](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) | vrt - manual- automatizada|
 |validar datos login|Login with email without its domain|[21-vrt](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/validateGhostAdminLogin.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/login.cy.js)| vrt-datos - automatizadas- manuales
  
-
+## correr los escenarios con la estrategia VRT 
+* Existe una carpeta ghost 5 y ghost 3, en cada uno están los screenshots para realización de las comparaciones. 
+carpeta version 5: https://github.com/emrz16/pruebas-automatizadas-equipo-20/tree/master/cypress-escenarios/cypress/e2e/ghost-5
+carpeta version 3: https://github.com/emrz16/pruebas-automatizadas-equipo-20/tree/master/cypress-escenarios/cypress/e2e/ghost-3
 
 
 ## Estrategias de datos para pruebas en cypress 
