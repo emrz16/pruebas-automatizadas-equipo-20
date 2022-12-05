@@ -10,24 +10,17 @@
 |Crear post | Crear post y modificar el contenido de Excerpt con mas de 300 caracteres |[#7](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|  manual - automatizada -VRT-generacion de datos
 |Crear post | Crear post y modificar el contenido de Excerpt con menos de 300 caracteres |[#8-VRT](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/post.cy.js)|  manual - automatizada -VRT-generacion de datos
 |Editar datos de admin  |Editar nombre |  [#9-VRT](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js)[datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js) | manual - automatizadas- vrt- generacion de datos| 
-|Editar datos de admin  |dejar vacio campo nombre en perfil | [#10-VRT](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js) |manual - automatizadas- vrt- generacion de datos| 
-|Editar datos de admin  |guarda email con formato correcto |[#11-VRT](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js)|manual - automatizadas- vrt- generacion de datos
-|Editar datos de admin  |no guarda email con formato incorrecto |[#12-VRT](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js)|manual - automatizadas- vrt- generacion de datos
-|Crear nueva etiqueta |Create tag with title and description | [12](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)
+|Editar datos de admin  |dejar vacio campo nombre en perfil | [#10-VRT](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js) |manual - automatizadas- vrt- generacion de datos|
+|Editar datos de admin  |guarda email con formato correcto |[#11-VRT](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js)|manual - automatizadas- vrt- generacion de datos|
+|Editar datos de admin  |no guarda email con formato incorrecto |[#12-VRT](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js)|manual - automatizadas- vrt- generacion de datos|
+|Crear nueva etiqueta |Create tag with title and description | [12](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)| manual - automatizada|
 |Crear nueva etiqueta |Create tag without name| [14](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)|
-|Crear nueva etiqueta |Create tag with invalid color format| [15](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)| manual-automatizadas - datos
-|Crear nueva etiqueta |Create tag with valid color format| [16](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)|manual-automatizadas - datos
-|Crear nueva etiqueta ||Create tag with name with more than 191 characters| [17](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)|manual-automatizadas - datos
-
-|Crear nueva pagina | Create page with title and body successfully |[18](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/page.cy.js)|manual-automatizadas - datos
-
-|Buscar miembros| search non member by name | [19-datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js) [vrt]https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/searchMember.cy.js|generacion de datos - vtr - manual - automatizado|manual-automatizadas - datos
-
-|Crear nuevo miembro|  Add member with note|manual-automatizadas - datos | [20](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) | vrt - manual- automatizada
-
-
-
-
+|Crear nueva etiqueta |Create tag with invalid color format| [15](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)| manual-automatizadas - datos|
+|Crear nueva etiqueta |Create tag with valid color format| [16](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)|manual-automatizadas - datos|
+|Crear nueva etiqueta ||Create tag with name with more than 191 characters| [17](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/tag.cy.js)|manual-automatizadas - datos|
+|Crear nueva pagina | Create page with title and body successfully |[18](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/page.cy.js)|manual-automatizadas - datos|
+|Buscar miembros| search non member by name | [19-datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js) [vrt]https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/searchMember.cy.js|generacion de datos - vtr - manual - automatizado|manual-automatizadas - datos|
+|Crear nuevo miembro|  Add member with note|manual-automatizadas - datos | [20](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) | vrt - manual- automatizada|
  
 
 
