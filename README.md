@@ -21,7 +21,7 @@
 |Crear nueva pagina | Create page with title and body successfully |[18](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/page.cy.js)|manual-automatizadas - datos|
 |Buscar miembros|search non member by name | [19-datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/members.cy.js) [vrt]https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/searchMember.cy.js| generacion de datos - vtr - manual - automatizado|manual-automatizadas - datos|
 |Crear nuevo miembro|  Add member with note | [20](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/panel_admin_y_miembros.cy.js) | vrt - manual- automatizada|
-|validar datos login||[vrt](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/validateGhostAdminLogin.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/login.cy.js)| vrt-datos - automatizadas- manuales
+|validar datos login|Login with email without its domain|[vrt](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/cypress-escenarios/cypress/e2e/ghost-5/validateGhostAdminLogin.cy.js) [datos](https://github.com/emrz16/pruebas-automatizadas-equipo-20/blob/master/estrategias-cypress/cypress/e2e/login.cy.js)| vrt-datos - automatizadas- manuales
  
 
 
